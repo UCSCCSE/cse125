@@ -35,7 +35,7 @@ module multiplier_1(
             product <= 32'd0;
 		 i =0;
         begin
-        else if(res_n && start)begin
+        else begin
 		if(i<arg2) begin
               product = product + arg1 ;
               i=i+1;
