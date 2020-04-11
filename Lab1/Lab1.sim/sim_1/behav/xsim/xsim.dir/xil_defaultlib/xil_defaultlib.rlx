@@ -2,7 +2,7 @@
 2019.2
 Nov  6 2019
 21:57:16
-D:/CSE125/Lab1/Lab1.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
-D:/CSE125/Lab1/Lab1.srcs/sim_1/imports/google download/Part1_lfsr_tb.v,1586471814,verilog,,,,lfsr_tb,,,,,,,,
-D:/CSE125/Lab1/Lab1.srcs/sources_1/new/lfsr_behavioural.v,1586476312,verilog,,D:/CSE125/Lab1/Lab1.srcs/sources_1/new/lfsr_structural.v,,lfsr_behavioural,,,,,,,,
-D:/CSE125/Lab1/Lab1.srcs/sources_1/new/lfsr_structural.v,1586475128,verilog,,D:/CSE125/Lab1/Lab1.srcs/sim_1/imports/google download/Part1_lfsr_tb.v,,lfsr_structural,,,,,,,,
+D:/CSE125/cse125/Lab1/Lab1.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/CSE125/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v,1586638187,verilog,,,,multiplier_tb,,,,,,,,
+D:/CSE125/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_1.v,1586636317,verilog,,D:/CSE125/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_4.v,,multiplier_1,,,,,,,,
+D:/CSE125/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_4.v,1586638140,verilog,,D:/CSE125/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v,,multiplier_4,,,,,,,,

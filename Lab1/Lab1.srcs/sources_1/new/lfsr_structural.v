@@ -26,9 +26,11 @@ module lfsr_structural(
     input [7:0] data_in,
     output [7:0] data_out
     );
+    wire y1;
+    xor (y1, data_out[1], data_out[7]);
     FDRE #(.INIT(1'b1) ) ff_q0 (.C(clk), .R(1'b0), .CE(1'b1), .D((data_out[7] & res_n) | (data_in[0] & ~res_n)), .Q(data_out[0]));
     FDRE #(.INIT(1'b0) ) ff_q1 (.C(clk), .R(1'b0), .CE(1'b1), .D((data_out[0] & res_n) | (data_in[1] & ~res_n)), .Q(data_out[1]));
-    FDRE #(.INIT(1'b0) ) ff_q2 (.C(clk), .R(1'b0), .CE(1'b1), .D(((data_out[1] ^ data_out[7]) & res_n) | (data_in[2] & ~res_n)), .Q(data_out[2]));
+    FDRE #(.INIT(1'b0) ) ff_q2 (.C(clk), .R(1'b0), .CE(1'b1), .D(((y1) & res_n) | (data_in[2] & ~res_n)), .Q(data_out[2]));
     FDRE #(.INIT(1'b0) ) ff_q3 (.C(clk), .R(1'b0), .CE(1'b1), .D(((data_out[2] ^ data_out[7]) & res_n) | (data_in[3] & ~res_n)), .Q(data_out[3]));
     FDRE #(.INIT(1'b0) ) ff_q4 (.C(clk), .R(1'b0), .CE(1'b1), .D(((data_out[3] ^ data_out[7]) & res_n) | (data_in[4] & ~res_n)), .Q(data_out[4]));
     FDRE #(.INIT(1'b0) ) ff_q5 (.C(clk), .R(1'b0), .CE(1'b1), .D((data_out[4] & res_n) | (data_in[5] & ~res_n)), .Q(data_out[5]));

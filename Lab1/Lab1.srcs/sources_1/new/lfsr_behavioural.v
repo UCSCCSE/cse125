@@ -27,7 +27,7 @@ module lfsr_behavioural(
     output reg [7:0] data_out
     );
     always @(posedge clk or negedge res_n) begin
-        if(!res_n)
+        if(!res_n && clk)
         begin
             data_out[0] <= data_in[0];
             data_out[1] <= data_in[1];
