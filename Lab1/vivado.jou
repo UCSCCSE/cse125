@@ -34,3 +34,8 @@ source multiplier_tb.tcl
 run 100 us
 run 100 us
 run 100 us
+reset_run synth_1
+launch_runs synth_1 -jobs 3 -scripts_only
+wait_on_run synth_1
+relaunch_sim
+relaunch_sim
