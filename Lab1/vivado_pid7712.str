@@ -1095,3 +1095,23 @@ dismissDialog("Relaunch Simulation"); // b (cr)
 // HMemoryUtils.trashcanNow. Engine heap size: 919 MB. GUI used memory: 69 MB. Current time: 4/11/20, 6:15:13 PM PDT
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 // HMemoryUtils.trashcanNow. Engine heap size: 919 MB. GUI used memory: 68 MB. Current time: 4/11/20, 6:15:13 PM PDT
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// Elapsed time: 303 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 1); // aL (aI, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lfsr_structural (lfsr_structural.v)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lfsr_structural (lfsr_structural.v)]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lfsr_behavioural (lfsr_behavioural.v)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lfsr_behavioural (lfsr_behavioural.v)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 63 seconds
+selectCodeEditor("lfsr_behavioural.v", 214, 243); // ch (w, cr)
+selectCodeEditor("lfsr_behavioural.v", 107, 204); // ch (w, cr)
+typeControlKey((HResource) null, "lfsr_behavioural.v", 'v'); // ch (w, cr)
+selectCodeEditor("lfsr_behavioural.v", 338, 258); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lfsr_structural.v", 3); // i (h, cr)
+// Elapsed time: 79 seconds
+selectCodeEditor("lfsr_structural.v", 349, 143); // ch (w, cr)
