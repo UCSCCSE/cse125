@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Apr 11 16:41:02 2020
+# Process ID: 15996
+# Current directory: D:/Programming/Git/cse125/Lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21012 D:\Programming\Git\cse125\Lab1\Lab1.xpr
+# Log file: D:/Programming/Git/cse125/Lab1/vivado.log
+# Journal file: D:/Programming/Git/cse125/Lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Programming/Git/cse125/Lab1/Lab1.xpr
+INFO: [Project 1-313] Project file moved from 'D:/CSE125/cse125/Lab1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 904.645 ; gain = 284.781
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 3
+[Sat Apr 11 16:42:35 2020] Launched synth_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log

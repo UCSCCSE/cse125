@@ -31,25 +31,21 @@ module multiplier_1(
     );
     integer i;
     always @(posedge clk or negedge res_n) begin
-        if(!res_n && clk)begin
-            product <= 32'd0;
-		 i =0;
-        begin
-        else begin
-		if(i<arg2) begin
-              product = product + arg1 ;
-              i=i+1;
-           end
-           else begin
-               done<=1;
-           end
-        end
-           // for( i = 0 ; i < arg2 ; i = i + 1 ) begin
-           //     product = product + arg1;
-          //  end
-          //  done <= 1;
-    end
-                
+      if((!res_n || start)&& clk) begin
+                   product <= 32'b0;
+                   i =0;
+                   done=0;
+                end                 
+                else begin
+                     if(i<arg2) begin
+                        product = product + arg1 ;
+                        i=i+1;     
+                     end
+                     else begin
+                          done<=1;
+                     end
+                 end
+              end
         
     
 endmodule

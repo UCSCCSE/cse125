@@ -31,19 +31,22 @@ module multiplier_4(
     );
     integer i;
     always @(posedge clk or negedge res_n) begin
-        if(!res_n && clk)
+        if(!res_n && clk)begin
             product <= 32'd0;
-        else if(res_n && start)
-            for( i = 0 ; i < arg2 ; i = i + 4 ) begin
-                product = product + arg1 + arg1 + arg1 + arg1;
-                if( (arg2 - i) == 3)
-                    product = product - arg1;
-                if( (arg2 - i) == 2)
-                    product = product - arg1 - arg1;
-                if( (arg2 - i) == 1)
-                    product = product - arg1 - arg1 -arg1;
-            end
+        end
+        else if(res_n && start)begin
+             product = product + arg1 + arg1 + arg1 + arg1;
+//            for( i = 0 ; i < arg2 ; i = i + 4 ) begin
+//                product = product + arg1 + arg1 + arg1 + arg1;
+//                if( (arg2 - i) == 3)
+//                    product = product - arg1;
+//                if( (arg2 - i) == 2)
+//                    product = product - arg1 - arg1;
+//                if( (arg2 - i) == 1)
+//                    product = product - arg1 - arg1 -arg1;
+//            end
             done <= 1;
+         end
     end
                 
         
