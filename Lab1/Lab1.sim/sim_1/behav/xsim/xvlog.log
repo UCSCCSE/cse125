@@ -1,6 +1,6 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_4
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/lfsr_behavioural.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lfsr_behavioural
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/lfsr_structural.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lfsr_structural
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part1_lfsr_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lfsr_tb

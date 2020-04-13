@@ -14,9 +14,9 @@ c8,
 lfsr_behavioural
 wns = -0.58ns
 target clock period = 20ns
-Fmax = 1/20+0.58 = 0.049mhz
+Fmax = 1/(20+0.58) = 0.049mhz
 
 lfsr_structural
 wns = -0.155ns
 target clock period = 20ns
-Fmax = 1/20+0.155 = 0.05mhz
+Fmax = 1/(20+0.155) = 0.05mhz

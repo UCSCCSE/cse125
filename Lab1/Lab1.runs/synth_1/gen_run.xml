@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1586654025">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1586816936">
   <File Type="PA-TCL" Name="multiplier_4.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="multiplier_4_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="multiplier_4_reports.tcl"/>
@@ -45,12 +45,18 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="multiplier_4"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/mul1_test.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/mul1_test.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

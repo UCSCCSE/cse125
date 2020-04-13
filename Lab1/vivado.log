@@ -2,10 +2,10 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat Apr 11 16:44:26 2020
-# Process ID: 7712
+# Start of session at: Mon Apr 13 14:34:53 2020
+# Process ID: 15740
 # Current directory: D:/Programming/Git/cse125/Lab1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19496 D:\Programming\Git\cse125\Lab1\Lab1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15660 D:\Programming\Git\cse125\Lab1\Lab1.xpr
 # Log file: D:/Programming/Git/cse125/Lab1/vivado.log
 # Journal file: D:/Programming/Git/cse125/Lab1\vivado.jou
 #-----------------------------------------------------------
@@ -16,50 +16,61 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 906.336 ; gain = 295.305
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 903.891 ; gain = 253.047
 update_compile_order -fileset sources_1
-set_property is_enabled true [get_files  D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/lfsr_behavioural.v]
-set_property is_enabled true [get_files  D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/lfsr_structural.v]
-update_compile_order -fileset sources_1
-set_property is_enabled true [get_files  {{D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part1_lfsr_tb.v}}]
-update_compile_order -fileset sim_1
-reset_run synth_1
-launch_runs synth_1 -jobs 3
-[Sat Apr 11 16:47:48 2020] Launched synth_1...
-Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 3
-[Sat Apr 11 16:57:39 2020] Launched synth_1...
-Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 3 -scripts_only
-reset_run synth_1
-launch_runs synth_1 -jobs 3 -scripts_only
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1188.379 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1851.816 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1851.816 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1851.816 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 1974.863 ; gain = 1045.582
+set_property is_enabled false [get_files  D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+set_property is_enabled true [get_files  D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+set_property target_constrs_file D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc [current_fileset -constrset]
+save_constraints -force
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'multiplier_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'lfsr_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj multiplier_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_4
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
+"xvlog --incr --relax -prj lfsr_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/lfsr_behavioural.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lfsr_behavioural
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/lfsr_structural.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lfsr_structural
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part1_lfsr_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lfsr_tb
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-"xelab -wto a5a7a4647d41486d94800a3609dbb50c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplier_tb_behav xil_defaultlib.multiplier_tb xil_defaultlib.glbl -log elaborate.log"
+"xelab -wto a5a7a4647d41486d94800a3609dbb50c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot lfsr_tb_behav xil_defaultlib.lfsr_tb xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto a5a7a4647d41486d94800a3609dbb50c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplier_tb_behav xil_defaultlib.multiplier_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto a5a7a4647d41486d94800a3609dbb50c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot lfsr_tb_behav xil_defaultlib.lfsr_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -67,20 +78,30 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.multiplier_1
-Compiling module xil_defaultlib.multiplier_4
-Compiling module xil_defaultlib.multiplier_tb
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.lfsr_structural
+Compiling module xil_defaultlib.lfsr_behavioural
+Compiling module xil_defaultlib.lfsr_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot multiplier_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Built simulation snapshot lfsr_tb_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/lfsr_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/lfsr_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Apr 13 14:40:06 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 13 14:40:06 2020...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "multiplier_tb_behav -key {Behavioral:sim_1:Functional:multiplier_tb} -tclbatch {multiplier_tb.tcl} -log {simulate.log}"
+   with args "lfsr_tb_behav -key {Behavioral:sim_1:Functional:lfsr_tb} -tclbatch {lfsr_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-source multiplier_tb.tcl
+source lfsr_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -91,102 +112,280 @@ source multiplier_tb.tcl
 #   }
 # }
 # run 1000ns
-mult1 output is correct
-Error with mult4 output
-$finish called at time : 465 ns : File "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v" Line 85
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'multiplier_tb_behav' loaded.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'lfsr_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 956.355 ; gain = 2.867
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2102.824 ; gain = 16.273
 run 100 us
-run 100 us
-run 100 us
+Structural LFSR passed
+Behavioral LFSR passed
+$finish called at time : 4600 ns : File "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part1_lfsr_tb.v" Line 102
+set_property top multiplier_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
 reset_run synth_1
-launch_runs synth_1 -jobs 3 -scripts_only
-relaunch_sim
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'multiplier_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj multiplier_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_4
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-"xelab -wto a5a7a4647d41486d94800a3609dbb50c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplier_tb_behav xil_defaultlib.multiplier_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.2
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto a5a7a4647d41486d94800a3609dbb50c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplier_tb_behav xil_defaultlib.multiplier_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.multiplier_1
-Compiling module xil_defaultlib.multiplier_4
-Compiling module xil_defaultlib.multiplier_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot multiplier_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.2
-Time resolution is 1 ps
-mult1 output is correct
-mult4 output is correct
-$finish called at time : 465 ns : File "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v" Line 85
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1047.523 ; gain = 0.000
-relaunch_sim
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'multiplier_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj multiplier_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sources_1/new/multiplier_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_4
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_tb
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Programming/Git/cse125/Lab1/Lab1.sim/sim_1/behav/xsim'
-"xelab -wto a5a7a4647d41486d94800a3609dbb50c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplier_tb_behav xil_defaultlib.multiplier_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.2
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto a5a7a4647d41486d94800a3609dbb50c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot multiplier_tb_behav xil_defaultlib.multiplier_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.multiplier_1
-Compiling module xil_defaultlib.multiplier_4
-Compiling module xil_defaultlib.multiplier_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot multiplier_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.2
-Time resolution is 1 ps
-mult1 output is correct
-mult4 output is correct
-$finish called at time : 465 ns : File "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v" Line 85
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1047.523 ; gain = 0.000
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1
+
+launch_runs impl_1 -jobs 2
+[Mon Apr 13 14:41:23 2020] Launched synth_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
+[Mon Apr 13 14:41:23 2020] Launched impl_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/impl_1/runme.log
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2304.492 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2304.492 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2304.492 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2304.492 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization -name utilization_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Mon Apr 13 14:48:17 2020] Launched synth_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
+close_design
+launch_runs impl_1 -jobs 2
+[Mon Apr 13 14:51:46 2020] Launched impl_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k70tfbv676-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2304.492 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+Finished Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2304.492 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Mon Apr 13 14:54:31 2020] Launched synth_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k70tfbv676-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2304.492 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+Finished Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2304.492 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization -name utilization_1
+set_property top multiplier_4 [current_fileset]
+update_compile_order -fileset sources_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+report_utilization -name utilization_2
+save_constraints
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Mon Apr 13 15:04:09 2020] Launched synth_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k70tfbv676-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2304.492 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+Finished Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2304.492 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+set_property top multiplier_1 [current_fileset]
+update_compile_order -fileset sources_1
+save_constraints
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Mon Apr 13 15:07:52 2020] Launched synth_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Mon Apr 13 15:08:33 2020] Launched synth_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k70tfbv676-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2376.805 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+Finished Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.805 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+save_constraints
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1
+
+launch_runs impl_1 -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Mon Apr 13 15:20:16 2020] Launched synth_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
+[Mon Apr 13 15:20:16 2020] Launched impl_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/impl_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k70tfbv676-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2421.586 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+Finished Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_utilization -name utilization_1
+set_property top multiplier_4 [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Mon Apr 13 15:28:56 2020] Launched synth_1...
+Run output will be captured here: D:/Programming/Git/cse125/Lab1/Lab1.runs/synth_1/runme.log
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2421.586 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+Finished Parsing XDC File [D:/Programming/Git/cse125/Lab1/Lab1.srcs/constrs_1/new/mul1_test.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2421.586 ; gain = 0.000
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization -name utilization_1

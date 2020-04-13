@@ -1,9 +1,13 @@
 multiplier_1:
-wns = -0.697ns
-target clock period: 20ns
-Fmax = 1/20+0.697 = 0.0483mhz
+LUT：52(Utilization)     41000(Avaiable)
+FF :65(Utilization)     82000(Avaiable)
+wns = -0.466ns
+target clock period: 11ns
+Fmax = 1/(11+0.466) = 0.087Mhz
 
 multiplier_4:
-wns = -0.696ns
-target clock period: 20ns
-Fmax = 1/20+0.696 = 0.0483mhz
+LUT:187(Utilization)     41000(Avaiable)
+FF :63 (Utilization)     82000(Avaiable)
+wns = -3.823ns
+target clock period: 11ns
+Fmax = 1/(11+3.823) = 0.0675Mhz
