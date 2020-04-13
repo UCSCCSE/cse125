@@ -1,0 +1,9 @@
+multiplier_1:
+wns = -0.697ns
+target clock period: 20ns
+Fmax = 1/20+0.697 = 0.0483mhz
+
+multiplier_4:
+wns = -0.696ns
+target clock period: 20ns
+Fmax = 1/20+0.696 = 0.0483mhz
