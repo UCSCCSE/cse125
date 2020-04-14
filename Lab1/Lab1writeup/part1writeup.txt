@@ -9,7 +9,9 @@ ae,
 64,
 c8,
 8d,
-07.
+
+data_out_struct[7:0]:  a5, 57, ae, 41, 82, 19, 32, 64, c8, 8d;
+data_out_behav[7:0]:   a5, 57, ae, 41, 82, 19, 32, 64, c8, 8d;
 
 lfsr_behavioural
 wns = -0.58ns

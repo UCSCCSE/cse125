@@ -1,0 +1,5 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+mult1 output is correct
+mult4 output is correct
+$finish called at time : 465 ns : File "D:/Programming/Git/cse125/Lab1/Lab1.srcs/sim_1/imports/google download/Part2_multiplier_tb.v" Line 85
