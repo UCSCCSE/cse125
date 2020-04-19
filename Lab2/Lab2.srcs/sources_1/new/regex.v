@@ -23,10 +23,10 @@
 module regex(
     input clk,
     input res_n,
-    input [1:0] simbol_in,
-    input last_simbol,
-    output result,
-    output done
+    input [1:0] symbol_in,
+    input last_symbol,
+    output reg result,
+    output reg done
     );
     parameter IDLE       = 4'b0000;
     parameter COM_IDLE   = 4'b0001;
@@ -36,7 +36,94 @@ module regex(
     parameter COM_STATE3 = 4'b0101;
     parameter COM_END    = 4'b0110;
     parameter COM_OVER   = 4'b0111;
-    parameter DONE       = 4'b1000;
+    //parameter DONE       = 4'b1000;
     
+    reg[3:0] current_state, next_state;
+    reg match;
     
+    always @(current_state, symbol_in)
+    begin
+        case(current_state)
+        COM_IDLE:
+        begin
+            if(symbol_in == 2'b00)
+                next_state <= COM_STATE0;
+            else if(symbol_in == 2'b11)
+                next_state <= COM_END;
+            else
+                next_state <= COM_OVER;
+        end
+        COM_STATE0:
+        begin
+            if(symbol_in == 2'b10)
+                next_state <= COM_STATE1;
+            else if(symbol_in == 2'b01)
+                next_state <= COM_STATE0;
+            else
+                next_state <= COM_OVER;
+        end
+        COM_STATE1:
+        begin
+            if(symbol_in == 2'b00)
+                next_state <= COM_IDLE;
+            else if(symbol_in == 2'b11)
+                next_state <= COM_STATE2;
+            else
+                next_state <= COM_OVER;
+        end
+        COM_STATE2:
+        begin
+            if((symbol_in == 2'b01) || (symbol_in == 2'b10) || (symbol_in == 2'b11))
+                next_state <= COM_STATE3;
+            else
+                next_state <= COM_OVER;
+        end
+        COM_STATE3:
+        begin
+            if(symbol_in == 2'b11)
+                next_state <= COM_END;
+            else
+                next_state <= COM_OVER;
+        end
+        COM_END:
+        begin
+            if((symbol_in == 2'b01) || (symbol_in == 2'b10) || (symbol_in == 2'b11) || (symbol_in == 2'b00))
+                next_state <= COM_OVER;
+            else
+                next_state <= COM_OVER;
+        end
+        COM_OVER:
+        begin
+            if(symbol_in == 2'b00)
+                next_state <= COM_OVER;
+            else
+                next_state <= COM_OVER;
+        end
+        default:
+            next_state <= COM_IDLE;
+        endcase
+    end
+    
+    always @ (posedge clk, negedge res_n)
+    begin
+        if (res_n == 1'b0)
+            current_state = COM_IDLE;
+        else 
+            current_state = next_state;
+    end
+
+    always @ (posedge clk)
+    begin
+        if (last_symbol == 1);
+            if(current_state == COM_END)
+            begin
+                result <= 1;
+                done <= 1;
+            end
+            else
+            begin
+                result <= 0;
+                done <= 1;
+            end
+    end
 endmodule

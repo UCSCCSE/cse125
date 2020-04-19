@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CSE125/cse125/Lab2/Lab2.srcs/sources_1/new/regex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regex
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CSE125/cse125/Lab2/Lab2.srcs/sim_1/imports/Part1/regex_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regex_tb
