@@ -106,24 +106,28 @@ module regex(
     
     always @ (posedge clk, negedge res_n)
     begin
-        if (res_n == 1'b0)
+        if (res_n == 1'b0)begin
             current_state = COM_IDLE;
+            result =0;
+            done =0;
+        end
         else 
             current_state = next_state;
     end
-
-    always @ (posedge clk)
+    
+    always @(negedge last_symbol ) begin
+                done <= 1;
+            end
+    always @(posedge clk)
     begin
-        if (last_symbol == 1);
+           
             if(current_state == COM_END)
             begin
                 result <= 1;
-                done <= 1;
             end
             else
             begin
                 result <= 0;
-                done <= 1;
             end
     end
 endmodule
