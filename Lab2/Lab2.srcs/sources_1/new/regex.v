@@ -100,7 +100,11 @@ module regex(
                 next_state <= COM_OVER;
         end
         default:
+        begin
             next_state <= COM_IDLE;
+            done =0;
+            result =0;
+        end   
         endcase
     end
     
@@ -110,7 +114,8 @@ module regex(
             current_state = COM_IDLE;
             result =0;
             done =0;
-        end        else 
+        end        
+        else 
             current_state = next_state;
     end
     
