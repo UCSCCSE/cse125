@@ -110,17 +110,12 @@ module regex(
             current_state = COM_IDLE;
             result =0;
             done =0;
-        end
-        else 
+        end        else 
             current_state = next_state;
     end
     
     always @(negedge last_symbol ) begin
                 done <= 1;
-            end
-    always @(posedge clk)
-    begin
-           
             if(current_state == COM_END)
             begin
                 result <= 1;
@@ -129,5 +124,10 @@ module regex(
             begin
                 result <= 0;
             end
-    end
+            end
+   // always @(posedge clk)
+   // begin
+           
+           
+   // end
 endmodule

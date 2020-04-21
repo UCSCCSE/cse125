@@ -57,16 +57,16 @@ module regex_tb;
         clk = 0;
         res_n = 0;
         last_symbol = 0;
-        @(posedge clk); #1 res_n = 1;
+        @(posedge clk); @(posedge clk); #1 res_n = 1;
         
         //First case
         for(i=0; i < case_1_len; i=i+1) begin
             symbol_in = case_1[i];
             if(i == case_1_len-1)
-                last_symbol = 1'b1;
+                #1 last_symbol = 1'b1;
             @(posedge clk);
         end
-        last_symbol = 1'b0;
+        #1 last_symbol = 1'b0;
         @(posedge clk);
         if(done && (result == expected_results[0]))
             $display("Regex correctly identified first case.");
@@ -74,17 +74,17 @@ module regex_tb;
             $display("Regex did not signal done at expected timing.");
         else
             $display("Regex failed to correctly identify first case"); 
-        res_n = 0;
+        #1 res_n = 0;
         @(posedge clk); #1 res_n = 1;
         
         //Second case
         for(i=0; i < case_2_len; i=i+1) begin
             symbol_in = case_2[i];
             if(i == case_2_len-1)
-                last_symbol = 1'b1;
+                #1 last_symbol = 1'b1;
             @(posedge clk);
         end
-        last_symbol = 1'b0;
+        #1 last_symbol = 1'b0;
         @(posedge clk);
         if(done && (result == expected_results[1]))
             $display("Regex correctly identified second case.");
@@ -92,17 +92,17 @@ module regex_tb;
             $display("Regex did not signal done at expected timing.");
         else
             $display("Regex failed to correctly identify second case"); 
-        res_n = 0;
+        #1 res_n = 0;
         @(posedge clk); #1 res_n = 1;
             
         //Third case
         for(i=0; i < case_3_len; i=i+1) begin
             symbol_in = case_3[i];
             if(i == case_3_len-1)
-                last_symbol = 1'b1;
+                #1 last_symbol = 1'b1;
             @(posedge clk);
         end
-        last_symbol = 1'b0;
+        #1 last_symbol = 1'b0;
         @(posedge clk);
         if(done && (result == expected_results[2]))
             $display("Regex correctly identified third case.");
@@ -110,17 +110,17 @@ module regex_tb;
             $display("Regex did not signal done at expected timing.");
         else
             $display("Regex failed to correctly identify third case"); 
-        res_n = 0;
+        #1 res_n = 0;
         @(posedge clk); #1 res_n = 1;
         
         //Fourth case
         for(i=0; i < case_4_len; i=i+1) begin
             symbol_in = case_4[i];
             if(i == case_4_len-1)
-                last_symbol = 1'b1;
+                #1 last_symbol = 1'b1;
             @(posedge clk);
         end
-        last_symbol = 1'b0;
+        #1 last_symbol = 1'b0;
         @(posedge clk);
         if(done && (result == expected_results[3]))
             $display("Regex correctly identified fourth case.");

@@ -30,3 +30,4 @@ wait_on_run synth_1
 close_sim
 launch_simulation
 source regex_tb.tcl
+close_sim

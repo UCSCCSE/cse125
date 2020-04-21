@@ -283,3 +283,7 @@ Regex correctly identified fourth case.
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'regex_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1434.875 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 20 01:20:22 2020...
