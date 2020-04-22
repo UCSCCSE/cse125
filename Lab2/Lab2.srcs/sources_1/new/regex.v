@@ -100,39 +100,39 @@ module regex(
                 next_state <= COM_OVER;
         end
         default:
-        begin
             next_state <= COM_IDLE;
-            done =0;
-            result =0;
-        end   
         endcase
     end
     
     always @ (posedge clk, negedge res_n)
     begin
-        if (res_n == 1'b0)begin
+        if (res_n == 1'b0)
+        begin
             current_state = COM_IDLE;
-            result =0;
-            done =0;
-        end        
+        end
         else 
             current_state = next_state;
     end
-    
-    always @(negedge last_symbol ) begin
-                done <= 1;
+
+    always @ (posedge clk)
+    begin
+        if (last_symbol == 1)
+        begin
             if(current_state == COM_END)
             begin
                 result <= 1;
+                done <= 1;
             end
             else
             begin
                 result <= 0;
+                done <= 1;
             end
-            end
-   // always @(posedge clk)
-   // begin
-           
-           
-   // end
+        end
+        else
+        begin
+            result <= 0;
+            done <= 0;
+        end
+    end
 endmodule
