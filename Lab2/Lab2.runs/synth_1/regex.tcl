@@ -37,6 +37,9 @@ read_verilog -library xil_defaultlib D:/Programming/Git/cse125/Lab2/Lab2.srcs/so
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc D:/Programming/Git/cse125/Lab2/Lab2.srcs/constrs_1/new/lab2_test.xdc
+set_property used_in_implementation false [get_files D:/Programming/Git/cse125/Lab2/Lab2.srcs/constrs_1/new/lab2_test.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
