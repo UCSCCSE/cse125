@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1587597275">
   <File Type="PA-TCL" Name="regex.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="regex_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="regex_reports.tcl"/>
   <File Type="RDS-RDS" Name="regex.vds"/>
   <File Type="RDS-UTIL" Name="regex_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="regex_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="regex.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="regex_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="regex_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/regex.v">
