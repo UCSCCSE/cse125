@@ -697,3 +697,5 @@ Completed Processing XDC Constraints
 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.352 ; gain = 18.641
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 26 13:44:13 2020...
