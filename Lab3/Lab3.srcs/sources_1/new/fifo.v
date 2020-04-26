@@ -36,11 +36,11 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
     reg [1:0]select;
     
     //assign select = full | empty | shift_in | shift_out; 
-    assign pre_out[DEPTH-1]= cur_out[0];
+    assign pre_out[0]= cur_out[DEPTH-1];
     genvar j;
     generate
         for(j=1;j<DEPTH;j=j+1)begin: DATA_OUT_CONNECT       
-            assign pre_out[j-1]=cur_out[j];
+            assign pre_out[j]=cur_out[j-1];
         end
     endgenerate
           

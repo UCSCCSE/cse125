@@ -34,3 +34,4 @@ refresh_design
 set_property needs_refresh false [get_runs synth_1]
 set_property needs_refresh false [get_runs impl_1]
 refresh_design
+refresh_design

@@ -1348,3 +1348,108 @@ dockFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic (3)"); // aA (aL, aN)
 // Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
 // Tcl Message: refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2793.711 ; gain = 39.168 
 dismissDialog("Reloading"); // bB (cr)
+// Elapsed time: 150 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fifo.v", 2); // i (h, cr)
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (3)", 4); // i (h, cr)
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // i (h, cr)
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+// Elapsed time: 47 seconds
+selectCodeEditor("fifo.v", 367, 96); // ch (w, cr)
+selectCodeEditor("fifo.v", 265, 91); // ch (w, cr)
+selectCodeEditor("fifo.v", 268, 93); // ch (w, cr)
+selectCodeEditor("fifo.v", 361, 95); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("fifo.v", 187, 12); // ch (w, cr)
+selectCodeEditor("fifo.v", 187, 12, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 232, 9); // ch (w, cr)
+selectCodeEditor("fifo.v", 226, 89); // ch (w, cr)
+selectCodeEditor("fifo.v", 215, 230); // ch (w, cr)
+selectCodeEditor("fifo.v", 234, 95); // ch (w, cr)
+selectCodeEditor("fifo.v", 276, 101); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 49 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (ds, cr)
+// bB (cr):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2793.711 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,240 MB. GUI used memory: 115 MB. Current time: 4/26/20, 1:05:10 PM PDT
+// Engine heap size: 2,240 MB. GUI used memory: 115 MB. Current time: 4/26/20, 1:05:10 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1384 ms.
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter DEPTH bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo_stage' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:69] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter STATE_HOLD bound to: 2'b00  	Parameter STATE_SI bound to: 2'b10  	Parameter STATE_SO bound to: 2'b01  	Parameter STATE_SI_SO bound to: 2'b11  
+// Tcl Message: INFO: [Synth 8-155] case statement is not full and has no default [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:88] INFO: [Synth 8-6155] done synthesizing module 'fifo_stage' (1#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:69] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo' (2#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2793.711 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2793.711 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2793.711 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,240 MB. GUI used memory: 114 MB. Current time: 4/26/20, 1:05:11 PM PDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2185 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2793.711 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.352 ; gain = 18.641 
+// Elapsed time: 10 seconds
+dismissDialog("Reloading"); // bB (cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 2); // i (h, cr)
+floatFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA (aL, cr)
+// PAResourceOtoP.PAViews_SCHEMATIC: Schematic: float view
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 30 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 537, 139, 1484, 820, false, false, false, true, false); // f (aA, aN) - Popup Trigger
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+// PAResourceOtoP.PAViews_SCHEMATIC: Schematic: close view
+// Elapsed time: 51 seconds
+closeFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA (aL, aN)
+dockFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA (aL, aN)
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+// WARNING: HEventQueue.dispatchEvent() is taking  2167 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,240 MB. GUI used memory: 116 MB. Current time: 4/26/20, 1:35:12 PM PDT
+// Elapsed time: 1957 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+floatFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA (aL, cr)
+// PAResourceOtoP.PAViews_SCHEMATIC: Schematic: float view
+// Elapsed time: 24 seconds
+closeFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA (aL, aN)
+dockFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA (aL, aN)
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
