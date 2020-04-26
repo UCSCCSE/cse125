@@ -1,0 +1,1350 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 20476
+License: Customer
+
+Current time: 	Sun Apr 26 10:23:06 PDT 2020
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Available disk space: 126 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	atenl
+User home directory: C:/Users/atenl
+User working directory: D:/Programming/Git/cse125/Lab3
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/atenl/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/atenl/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/atenl/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Programming/Git/cse125/Lab3/vivado.log
+Vivado journal file location: 	D:/Programming/Git/cse125/Lab3/vivado.jou
+Engine tmp dir: 	D:/Programming/Git/cse125/Lab3/.Xil/Vivado-20476-DESKTOP-G7LSD5Q
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 551 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// WARNING: HEventQueue.dispatchEvent() is taking  1066 ms.
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  2791 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: D:\Programming\Git\cse125\Lab3\Lab3.xpr. Version: Vivado v2019.2 
+// WARNING: HEventQueue.dispatchEvent() is taking  1959 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 554 MB. GUI used memory: 49 MB. Current time: 4/26/20, 10:23:09 AM PDT
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/Programming/Git/cse125/Lab3/Lab3.xpr 
+// WARNING: HEventQueue.dispatchEvent() is taking  1215 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1959 ms.
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1112 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 48 MB. Current time: 4/26/20, 10:23:27 AM PDT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/Programming/Git/cse125/Lab3/Lab3.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/Programming/Git/cse125/Lab3/Lab3' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 61 MB (+61380kb) [00:01:01]
+// [Engine Memory]: 769 MB (+654629kb) [00:01:01]
+// [GUI Memory]: 73 MB (+9890kb) [00:01:01]
+// [GUI Memory]: 97 MB (+20765kb) [00:01:02]
+// [GUI Memory]: 104 MB (+2227kb) [00:01:03]
+// [Engine Memory]: 820 MB (+13346kb) [00:01:03]
+// WARNING: HEventQueue.dispatchEvent() is taking  4054 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// Project name: Lab3; location: D:/Programming/Git/cse125/Lab3; part: xc7k70tfbv676-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 994.449 ; gain = 414.801 
+dismissDialog("Open Project"); // bB (cr)
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (fifo.v) elapsed time: 0.2s
+// Elapsed time: 529 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v)]", 1, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v), MEM[0].FS0 : fifo_stage (fifo.v)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("fifo.v", 335, 179); // ch (w, cr)
+selectCodeEditor("fifo.v", 335, 179, false, false, false, false, true); // ch (w, cr) - Double Click
+// [GUI Memory]: 121 MB (+12887kb) [00:10:22]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v), FIFO[0].FS0 : fifo_stage (fifo.v)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v), FIFO[0].FS0 : fifo_stage (fifo.v)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 47 seconds
+selectCodeEditor("fifo.v", 554, 177); // ch (w, cr)
+// Elapsed time: 39 seconds
+selectCodeEditor("fifo.v", 29, 221); // ch (w, cr)
+// Elapsed time: 83 seconds
+selectCodeEditor("fifo.v", 364, 182); // ch (w, cr)
+// Elapsed time: 355 seconds
+selectCodeEditor("fifo.v", 203, 304); // ch (w, cr)
+selectCodeEditor("fifo.v", 204, 305, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("fifo.v", 370, 348); // ch (w, cr)
+// Elapsed time: 24 seconds
+selectCodeEditor("fifo.v", 81, 305); // ch (w, cr)
+// Elapsed time: 20 seconds
+selectCodeEditor("fifo.v", 296, 309); // ch (w, cr)
+selectCodeEditor("fifo.v", 362, 332); // ch (w, cr)
+selectCodeEditor("fifo.v", 399, 309); // ch (w, cr)
+selectCodeEditor("fifo.v", 338, 336); // ch (w, cr)
+selectCodeEditor("fifo.v", 193, 307); // ch (w, cr)
+selectCodeEditor("fifo.v", 198, 297); // ch (w, cr)
+selectCodeEditor("fifo.v", 394, 310); // ch (w, cr)
+selectCodeEditor("fifo.v", 376, 371); // ch (w, cr)
+selectCodeEditor("fifo.v", 286, 299); // ch (w, cr)
+// Elapsed time: 72 seconds
+selectCodeEditor("fifo.v", 189, 300); // ch (w, cr)
+selectCodeEditor("fifo.v", 155, 300); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 298, 308); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'c'); // ch (w, cr)
+selectCodeEditor("fifo.v", 363, 302); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 496, 197); // ch (w, cr)
+// Elapsed time: 109 seconds
+selectCodeEditor("fifo.v", 32, 201); // ch (w, cr)
+selectCodeEditor("fifo.v", 166, 242); // ch (w, cr)
+selectCodeEditor("fifo.v", 156, 234); // ch (w, cr)
+// Elapsed time: 129 seconds
+selectCodeEditor("fifo.v", 53, 118); // ch (w, cr)
+selectCodeEditor("fifo.v", 53, 118); // ch (w, cr)
+selectCodeEditor("fifo.v", 53, 118, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 129, 217); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("fifo.v", 250, 239); // ch (w, cr)
+selectCodeEditor("fifo.v", 359, 239); // ch (w, cr)
+selectCodeEditor("fifo.v", 133, 324); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("fifo.v", 88, 243); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("fifo.v", 294, 238); // ch (w, cr)
+selectCodeEditor("fifo.v", 414, 312); // ch (w, cr)
+selectCodeEditor("fifo.v", 187, 242); // ch (w, cr)
+selectCodeEditor("fifo.v", 292, 242); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 846 MB. GUI used memory: 58 MB. Current time: 4/26/20, 10:53:27 AM PDT
+// Elapsed time: 204 seconds
+selectCodeEditor("fifo.v", 79, 113); // ch (w, cr)
+selectCodeEditor("fifo.v", 155, 113); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 76, 134); // ch (w, cr)
+selectCodeEditor("fifo.v", 145, 133); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 198, 204); // ch (w, cr)
+selectCodeEditor("fifo.v", 153, 239); // ch (w, cr)
+selectCodeEditor("fifo.v", 152, 115); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'c'); // ch (w, cr)
+selectCodeEditor("fifo.v", 154, 235); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 360, 241); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 438, 196); // ch (w, cr)
+// Elapsed time: 218 seconds
+selectCodeEditor("fifo.v", 456, 239); // ch (w, cr)
+selectCodeEditor("fifo.v", 251, 239); // ch (w, cr)
+// Elapsed time: 263 seconds
+selectCodeEditor("fifo.v", 342, 137); // ch (w, cr)
+selectCodeEditor("fifo.v", 352, 114); // ch (w, cr)
+// Elapsed time: 33 seconds
+selectCodeEditor("fifo.v", 337, 239); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 36 seconds
+selectCodeEditor("fifo.v", 58, 119); // ch (w, cr)
+selectCodeEditor("fifo.v", 57, 119, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 130, 265); // ch (w, cr)
+selectCodeEditor("fifo.v", 44, 119); // ch (w, cr)
+selectCodeEditor("fifo.v", 44, 119, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("fifo.v", 150, 243); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("fifo.v", 332, 241); // ch (w, cr)
+selectCodeEditor("fifo.v", 344, 323); // ch (w, cr)
+selectCodeEditor("fifo.v", 336, 239); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("fifo.v", 314, 210); // ch (w, cr)
+// Elapsed time: 71 seconds
+selectCodeEditor("fifo.v", 156, 112); // ch (w, cr)
+selectCodeEditor("fifo.v", 81, 117); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 148, 136); // ch (w, cr)
+selectCodeEditor("fifo.v", 72, 136); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 228, 219); // ch (w, cr)
+// Elapsed time: 31 seconds
+selectCodeEditor("fifo.v", 250, 243); // ch (w, cr)
+selectCodeEditor("fifo.v", 328, 246); // ch (w, cr)
+selectCodeEditor("fifo.v", 244, 237); // ch (w, cr)
+selectCodeEditor("fifo.v", 304, 247); // ch (w, cr)
+// Elapsed time: 23 seconds
+selectCodeEditor("fifo.v", 24, 239); // ch (w, cr)
+selectCodeEditor("fifo.v", 216, 229); // ch (w, cr)
+selectCodeEditor("fifo.v", 87, 244); // ch (w, cr)
+selectCodeEditor("fifo.v", 407, 324); // ch (w, cr)
+selectCodeEditor("fifo.v", 402, 300); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 18, 241); // ch (w, cr)
+selectCodeEditor("fifo.v", 212, 276); // ch (w, cr)
+selectCodeEditor("fifo.v", 101, 323); // ch (w, cr)
+selectCodeEditor("fifo.v", 226, 252); // ch (w, cr)
+selectCodeEditor("fifo.v", 53, 108); // ch (w, cr)
+selectCodeEditor("fifo.v", 52, 110, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 59, 116); // ch (w, cr)
+selectCodeEditor("fifo.v", 57, 116, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 109, 236); // ch (w, cr)
+selectCodeEditor("fifo.v", 45, 113); // ch (w, cr)
+selectCodeEditor("fifo.v", 45, 113, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 135, 251); // ch (w, cr)
+selectCodeEditor("fifo.v", 96, 320); // ch (w, cr)
+selectCodeEditor("fifo.v", 39, 325); // ch (w, cr)
+selectCodeEditor("fifo.v", 72, 324); // ch (w, cr)
+selectCodeEditor("fifo.v", 905, 347); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 381, 399); // ch (w, cr)
+// Elapsed time: 413 seconds
+selectCodeEditor("fifo.v", 244, 139); // ch (w, cr)
+// Elapsed time: 39 seconds
+selectCodeEditor("fifo.v", 403, 228); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("fifo.v", 383, 222); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("fifo.v", 818, 349); // ch (w, cr)
+selectCodeEditor("fifo.v", 817, 348, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 23 seconds
+selectCodeEditor("fifo.v", 251, 112); // ch (w, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("fifo.v", 277, 116); // ch (w, cr)
+selectCodeEditor("fifo.v", 397, 197); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("fifo.v", 233, 365); // ch (w, cr)
+selectCodeEditor("fifo.v", 136, 369); // ch (w, cr)
+selectCodeEditor("fifo.v", 566, 439); // ch (w, cr)
+// Elapsed time: 28 seconds
+selectCodeEditor("fifo.v", 82, 119); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'c'); // ch (w, cr)
+selectCodeEditor("fifo.v", 71, 366); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 297, 364); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 285, 419); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("fifo.v", 133, 366); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 361, 368); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 68, 365); // ch (w, cr)
+// Elapsed time: 155 seconds
+selectCodeEditor("fifo.v", 95, 129); // ch (w, cr)
+selectCodeEditor("fifo.v", 180, 11); // ch (w, cr)
+selectCodeEditor("fifo.v", 204, 103); // ch (w, cr)
+selectCodeEditor("fifo.v", 214, 226); // ch (w, cr)
+selectCodeEditor("fifo.v", 135, 347); // ch (w, cr)
+selectCodeEditor("fifo.v", 188, 94); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'c'); // ch (w, cr)
+selectCodeEditor("fifo.v", 126, 207); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("fifo.v", 182, 119); // ch (w, cr)
+selectCodeEditor("fifo.v", 182, 119, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 191, 118); // ch (w, cr)
+selectCodeEditor("fifo.v", 192, 118, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "fifo.v", 'c'); // ch (w, cr)
+selectCodeEditor("fifo.v", 148, 207); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 173, 189); // ch (w, cr)
+selectCodeEditor("fifo.v", 32, 201); // ch (w, cr)
+selectCodeEditor("fifo.v", 412, 194); // ch (w, cr)
+selectCodeEditor("fifo.v", 438, 311); // ch (w, cr)
+// Elapsed time: 30 seconds
+selectCodeEditor("fifo.v", 81, 94); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'c'); // ch (w, cr)
+selectCodeEditor("fifo.v", 159, 198); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 357, 202); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 321, 258); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("fifo.v", 62, 204); // ch (w, cr)
+selectCodeEditor("fifo.v", 83, 199); // ch (w, cr)
+selectCodeEditor("fifo.v", 260, 198); // ch (w, cr)
+selectCodeEditor("fifo.v", 357, 197); // ch (w, cr)
+selectCodeEditor("fifo.v", 267, 249); // ch (w, cr)
+selectCodeEditor("fifo.v", 211, 262); // ch (w, cr)
+selectCodeEditor("fifo.v", 348, 205); // ch (w, cr)
+selectCodeEditor("fifo.v", 307, 313); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 846 MB. GUI used memory: 53 MB. Current time: 4/26/20, 11:23:28 AM PDT
+// Elapsed time: 16 seconds
+selectCodeEditor("fifo.v", 60, 216); // ch (w, cr)
+// Elapsed time: 135 seconds
+selectCodeEditor("fifo.v", 400, 191); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("fifo.v", 92, 309); // ch (w, cr)
+selectCodeEditor("fifo.v", 200, 258); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 236, 197); // ch (w, cr)
+selectCodeEditor("fifo.v", 144, 118); // ch (w, cr)
+// Elapsed time: 26 seconds
+selectCodeEditor("fifo.v", 254, 141); // ch (w, cr)
+// Elapsed time: 24 seconds
+selectCodeEditor("fifo.v", 322, 156); // ch (w, cr)
+selectCodeEditor("fifo.v", 38, 160); // ch (w, cr)
+selectCodeEditor("fifo.v", 36, 160); // ch (w, cr)
+selectCodeEditor("fifo.v", 45, 179); // ch (w, cr)
+selectCodeEditor("fifo.v", 33, 94); // ch (w, cr)
+selectCodeEditor("fifo.v", 1, 115); // ch (w, cr)
+selectCodeEditor("fifo.v", 0, 141); // ch (w, cr)
+selectCodeEditor("fifo.v", 2, 264); // ch (w, cr)
+selectCodeEditor("fifo.v", 36, 71); // ch (w, cr)
+selectCodeEditor("fifo.v", 73, 93); // ch (w, cr)
+selectCodeEditor("fifo.v", 31, 220); // ch (w, cr)
+selectCodeEditor("fifo.v", 35, 220); // ch (w, cr)
+selectCodeEditor("fifo.v", 70, 260); // ch (w, cr)
+selectCodeEditor("fifo.v", 35, 312); // ch (w, cr)
+selectCodeEditor("fifo.v", 78, 239); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("fifo.v", 243, 157); // ch (w, cr)
+selectCodeEditor("fifo.v", 359, 158); // ch (w, cr)
+selectCodeEditor("fifo.v", 127, 135); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("fifo.v", 257, 157); // ch (w, cr)
+selectCodeEditor("fifo.v", 197, 159); // ch (w, cr)
+// Elapsed time: 119 seconds
+selectCodeEditor("fifo.v", 338, 179); // ch (w, cr)
+selectCodeEditor("fifo.v", 458, 113); // ch (w, cr)
+// Elapsed time: 30 seconds
+selectCodeEditor("fifo.v", 368, 193); // ch (w, cr)
+selectCodeEditor("fifo.v", 610, 115); // ch (w, cr)
+selectCodeEditor("fifo.v", 492, 162); // ch (w, cr)
+// Elapsed time: 24 seconds
+selectCodeEditor("fifo.v", 376, 119); // ch (w, cr)
+selectCodeEditor("fifo.v", 418, 99); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("fifo.v", 83, 95); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'c'); // ch (w, cr)
+selectCodeEditor("fifo.v", 219, 115); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 211, 114); // ch (w, cr)
+selectCodeEditor("fifo.v", 211, 114, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 388, 114); // ch (w, cr)
+selectCodeEditor("fifo.v", 124, 245); // ch (w, cr)
+selectCodeEditor("fifo.v", 36, 240); // ch (w, cr)
+selectCodeEditor("fifo.v", 35, 259); // ch (w, cr)
+selectCodeEditor("fifo.v", 118, 344); // ch (w, cr)
+selectCodeEditor("fifo.v", 162, 261); // ch (w, cr)
+selectCodeEditor("fifo.v", 32, 285); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'c'); // ch (w, cr)
+selectCodeEditor("fifo.v", 84, 216); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 111, 260); // ch (w, cr)
+// Elapsed time: 29 seconds
+selectCodeEditor("fifo.v", 369, 238); // ch (w, cr)
+selectCodeEditor("fifo.v", 369, 238, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("fifo.v", 373, 331); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 302 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo (fifo.v)]", 1); // B (F, cr)
+// Elapsed time: 250 seconds
+selectCodeEditor("fifo.v", 444, 55); // ch (w, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("fifo.v", 102, 277); // ch (w, cr)
+// Elapsed time: 33 seconds
+selectCodeEditor("fifo.v", 73, 117); // ch (w, cr)
+selectCodeEditor("fifo.v", 73, 117, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 167, 176); // ch (w, cr)
+selectCodeEditor("fifo.v", 127, 204); // ch (w, cr)
+selectCodeEditor("fifo.v", 128, 203, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 132, 201); // ch (w, cr)
+selectCodeEditor("fifo.v", 132, 202, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 30 seconds
+selectCodeEditor("fifo.v", 333, 115); // ch (w, cr)
+selectCodeEditor("fifo.v", 57, 364); // ch (w, cr)
+selectCodeEditor("fifo.v", 57, 364, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 139, 219); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("fifo.v", 31, 33); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("fifo.v", 27, 92); // ch (w, cr)
+selectCodeEditor("fifo.v", 183, 174); // ch (w, cr)
+selectCodeEditor("fifo.v", 28, 199); // ch (w, cr)
+selectCodeEditor("fifo.v", 91, 72); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 159, 194); // ch (w, cr)
+// Elapsed time: 26 seconds
+selectCodeEditor("fifo.v", 123, 134); // ch (w, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("fifo.v", 105, 175); // ch (w, cr)
+selectCodeEditor("fifo.v", 192, 206); // ch (w, cr)
+// Elapsed time: 20 seconds
+selectCodeEditor("fifo.v", 49, 382); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("fifo.v", 154, 185); // ch (w, cr)
+selectCodeEditor("fifo.v", 47, 116); // ch (w, cr)
+selectCodeEditor("fifo.v", 38, 114); // ch (w, cr)
+selectCodeEditor("fifo.v", 44, 112); // ch (w, cr)
+selectCodeEditor("fifo.v", 46, 231); // ch (w, cr)
+selectCodeEditor("fifo.v", 59, 239); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+// Elapsed time: 71 seconds
+selectCodeEditor("fifo.v", 34, 262); // ch (w, cr)
+selectCodeEditor("fifo.v", 30, 359); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 22, 367); // ch (w, cr)
+selectCodeEditor("fifo.v", 27, 371); // ch (w, cr)
+selectCodeEditor("fifo.v", 25, 116); // ch (w, cr)
+selectCodeEditor("fifo.v", 99, 162); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("fifo.v", 60, 138); // ch (w, cr)
+selectCodeEditor("fifo.v", 60, 138, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 61, 161); // ch (w, cr)
+selectCodeEditor("fifo.v", 61, 161, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 89, 209); // ch (w, cr)
+// Elapsed time: 20 seconds
+selectCodeEditor("fifo.v", 39, 199); // ch (w, cr)
+selectCodeEditor("fifo.v", 115, 93); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 38, 365); // ch (w, cr)
+selectCodeEditor("fifo.v", 139, 93); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 235, 145); // ch (w, cr)
+// Elapsed time: 116 seconds
+selectCodeEditor("fifo.v", 518, 172); // ch (w, cr)
+selectCodeEditor("fifo.v", 39, 391); // ch (w, cr)
+selectCodeEditor("fifo.v", 19, 135); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 218, 208); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("fifo.v", 44, 133); // ch (w, cr)
+selectCodeEditor("fifo.v", 44, 133, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 58, 139); // ch (w, cr)
+selectCodeEditor("fifo.v", 58, 139, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 109 seconds
+selectCodeEditor("fifo.v", 1, 266); // ch (w, cr)
+selectCodeEditor("fifo.v", 13, 330); // ch (w, cr)
+selectCodeEditor("fifo.v", 43, 187); // ch (w, cr)
+selectCodeEditor("fifo.v", 180, 241); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 37, 266); // ch (w, cr)
+selectCodeEditor("fifo.v", 179, 346); // ch (w, cr)
+selectCodeEditor("fifo.v", 48, 138); // ch (w, cr)
+selectCodeEditor("fifo.v", 48, 138, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 276, 242); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 846 MB. GUI used memory: 53 MB. Current time: 4/26/20, 11:53:28 AM PDT
+// Elapsed time: 26 seconds
+selectCodeEditor("fifo.v", 30, 95); // ch (w, cr)
+selectCodeEditor("fifo.v", 59, 222); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 38, 121); // ch (w, cr)
+selectCodeEditor("fifo.v", 67, 160); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 278, 147); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectCodeEditor("fifo.v", 70, 325); // ch (w, cr)
+selectCodeEditor("fifo.v", 67, 328); // ch (w, cr)
+selectCodeEditor("fifo.v", 207, 279); // ch (w, cr)
+// Elapsed time: 13 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("fifo.v", 314, 210); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 11 seconds
+selectCodeEditor("fifo.v", 530, 132); // ch (w, cr)
+selectCodeEditor("fifo.v", 182, 112); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("fifo.v", 154, 196); // ch (w, cr)
+selectCodeEditor("fifo.v", 157, 196, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 398, 204); // ch (w, cr)
+selectCodeEditor("fifo.v", 398, 269); // ch (w, cr)
+selectCodeEditor("fifo.v", 65, 136); // ch (w, cr)
+selectCodeEditor("fifo.v", 173, 176); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 218, 249); // ch (w, cr)
+selectCodeEditor("fifo.v", 74, 221); // ch (w, cr)
+selectCodeEditor("fifo.v", 78, 221); // ch (w, cr)
+selectCodeEditor("fifo.v", 221, 225); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("fifo.v", 61, 98); // ch (w, cr)
+selectCodeEditor("fifo.v", 61, 98, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 49, 96); // ch (w, cr)
+selectCodeEditor("fifo.v", 49, 96, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 58, 72); // ch (w, cr)
+selectCodeEditor("fifo.v", 58, 72, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 154, 204); // ch (w, cr)
+selectCodeEditor("fifo.v", 381, 198); // ch (w, cr)
+// Elapsed time: 57 seconds
+selectCodeEditor("fifo.v", 51, 243); // ch (w, cr)
+selectCodeEditor("fifo.v", 51, 243, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 71, 238); // ch (w, cr)
+selectCodeEditor("fifo.v", 71, 238, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 62, 379); // ch (w, cr)
+selectCodeEditor("fifo.v", 63, 379, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 62, 128); // ch (w, cr)
+selectCodeEditor("fifo.v", 115, 263); // ch (w, cr)
+selectCodeEditor("fifo.v", 146, 222); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 67, 207); // ch (w, cr)
+selectCodeEditor("fifo.v", 67, 207, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 101, 308); // ch (w, cr)
+selectCodeEditor("fifo.v", 104, 353); // ch (w, cr)
+selectCodeEditor("fifo.v", 104, 353, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 109, 331); // ch (w, cr)
+selectCodeEditor("fifo.v", 31, 180); // ch (w, cr)
+selectCodeEditor("fifo.v", 69, 88); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 46, 95); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("fifo.v", 35, 136); // ch (w, cr)
+selectCodeEditor("fifo.v", 156, 166); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+// Elapsed time: 150 seconds
+selectCodeEditor("fifo.v", 32, 220); // ch (w, cr)
+selectCodeEditor("fifo.v", 396, 225); // ch (w, cr)
+selectCodeEditor("fifo.v", 99, 221); // ch (w, cr)
+selectCodeEditor("fifo.v", 284, 297); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 82, 224); // ch (w, cr)
+selectCodeEditor("fifo.v", 82, 224, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 162, 289); // ch (w, cr)
+selectCodeEditor("fifo.v", 25, 226); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("fifo.v", 74, 246); // ch (w, cr)
+selectCodeEditor("fifo.v", 47, 139); // ch (w, cr)
+selectCodeEditor("fifo.v", 48, 135, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 580 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("fifo.v", 63, 266); // ch (w, cr)
+selectCodeEditor("fifo.v", 86, 351); // ch (w, cr)
+selectCodeEditor("fifo.v", 162, 350); // ch (w, cr)
+selectCodeEditor("fifo.v", 161, 355); // ch (w, cr)
+selectCodeEditor("fifo.v", 75, 328); // ch (w, cr)
+selectCodeEditor("fifo.v", 153, 323); // ch (w, cr)
+selectCodeEditor("fifo.v", 142, 288); // ch (w, cr)
+selectCodeEditor("fifo.v", 53, 297); // ch (w, cr)
+selectCodeEditor("fifo.v", 85, 327); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 38 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 11); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 12); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, fifo (fifo.v)]", 13); // B (F, cr)
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bB (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Sun Apr 26 12:13:25 2020] Launched synth_1... Run output will be captured here: D:/Programming/Git/cse125/Lab3/Lab3.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Synthesis Failed: addNotify
+// Elapsed time: 19 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // aj (cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-685] variable 'cur_out' should not be used in output port connection [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:58]. ]", 1, false); // ah (O, cr)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Programming\Git\cse125\Lab3\Lab3.srcs\sources_1\new\fifo.v;-;;-;16;-;line;-;58;-;;-;16;-;"); // ah (O, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("fifo.v", 308, 313); // ch (w, cr)
+selectCodeEditor("fifo.v", 351, 220); // ch (w, cr)
+selectCodeEditor("fifo.v", 336, 133); // ch (w, cr)
+selectCodeEditor("fifo.v", 124, 72); // ch (w, cr)
+// Elapsed time: 28 seconds
+selectCodeEditor("fifo.v", 514, 219); // ch (w, cr)
+selectCodeEditor("fifo.v", 439, 166); // ch (w, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-196] conditional expression could not be resolved to a constant [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:57]. ]", 2, false); // ah (O, cr)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Programming\Git\cse125\Lab3\Lab3.srcs\sources_1\new\fifo.v;-;;-;16;-;line;-;57;-;;-;16;-;"); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6156] failed synthesizing module 'fifo' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23]. ]", 3, false); // ah (O, cr)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Programming\Git\cse125\Lab3\Lab3.srcs\sources_1\new\fifo.v;-;;-;16;-;line;-;23;-;;-;16;-;"); // ah (O, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// al (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bB (cr):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("Save Project"); // al (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_MODIFY
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bB (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun Apr 26 12:15:07 2020] Launched synth_1... Run output will be captured here: D:/Programming/Git/cse125/Lab3/Lab3.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Synthesis Failed: addNotify
+// Elapsed time: 16 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // aj (cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-685] variable 'cur_out' should not be used in output port connection [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:58]. ]", 1, false); // ah (O, cr)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Programming\Git\cse125\Lab3\Lab3.srcs\sources_1\new\fifo.v;-;;-;16;-;line;-;58;-;;-;16;-;"); // ah (O, cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("fifo.v", 44, 92); // ch (w, cr)
+selectCodeEditor("fifo.v", 44, 92); // ch (w, cr)
+selectCodeEditor("fifo.v", 45, 93); // ch (w, cr)
+selectCodeEditor("fifo.v", 45, 93, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("fifo.v", 217, 126); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bB (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Sun Apr 26 12:16:02 2020] Launched synth_1... Run output will be captured here: D:/Programming/Git/cse125/Lab3/Lab3.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+selectCodeEditor("fifo.v", 212, 204); // ch (w, cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Synthesis Completed: addNotify
+// Elapsed time: 116 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a (Q, aj)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// bB (cr):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7k70tfbv676-1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,212 MB. GUI used memory: 55 MB. Current time: 4/26/20, 12:18:13 PM PDT
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,212 MB. GUI used memory: 55 MB. Current time: 4/26/20, 12:18:14 PM PDT
+// [Engine Memory]: 1,212 MB (+368263kb) [01:55:42]
+// Xgd.load filename: C:/Xilinx/Vivado/2019.2/data/parts/xilinx/kintex7/devint/kintex7/xc7k70t/xc7k70t.xgd; ZipEntry: xc7k70t_detail.xgd elapsed time: 0.6s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 1,288 MB (+15665kb) [01:55:44]
+// Device: addNotify
+// [GUI Memory]: 131 MB (+4039kb) [01:55:44]
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  2123 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7k70tfbv676-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1284.820 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2019.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1365.793 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// Tcl Message: open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 1505.313 ; gain = 462.742 
+// 'dQ' command handler elapsed time: 13 seconds
+// Device view-level: 0.1
+// Elapsed time: 13 seconds
+dismissDialog("Open Synthesized Design"); // bB (cr)
+// Device view-level: 0.0
+// [GUI Memory]: 147 MB (+9877kb) [01:55:48]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// [Engine Memory]: 1,352 MB (+50kb) [01:55:51]
+// PAPropertyPanels.initPanels (<const0>) elapsed time: 0.7s
+// [Engine Memory]: 1,581 MB (+169014kb) [01:55:58]
+// RouteApi::initDelayMediator elapsed time: 13.5s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+selectButton(PAResourceQtoS.SchematicView_ADD, "Schematic_addToSchematic"); // E (f, cr)
+selectButton(PAResourceQtoS.SchematicView_ADD, "Schematic_addToSchematic"); // E (f, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,750 MB. GUI used memory: 89 MB. Current time: 4/26/20, 12:18:33 PM PDT
+// [Engine Memory]: 1,750 MB (+94164kb) [01:56:01]
+floatFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA (aL, cr)
+// PAResourceOtoP.PAViews_SCHEMATIC: Schematic: float view
+selectButton(PAResourceQtoS.SchematicView_ADD, "Schematic_addToSchematic"); // E (f, aN)
+selectButton(PAResourceQtoS.SchematicView_ADD, "Schematic_addToSchematic"); // E (f, aN)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// HMemoryUtils.trashcanNow. Engine heap size: 1,808 MB. GUI used memory: 88 MB. Current time: 4/26/20, 12:18:48 PM PDT
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (data_in) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (<const1>) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (data_out_OBUF[0]_inst (OBUFT)) elapsed time: 0.2s
+// Elapsed time: 48 seconds
+selectButton(PAResourceItoN.NetlistSchematicView_SHOW_CELLS_IN_THIS_SCHEMATIC, "65 Cells"); // h (f, aN)
+// Elapsed time: 46 seconds
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 854, 123, 1490, 822, false, false, false, true, false); // f (aA, aN) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, Popup.HeavyWeightWindow)
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Cell Properties..."); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+// Elapsed time: 12 seconds
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Nets (67), data_out]", 2); // bD (O, cr)
+// Elapsed time: 11 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cr)
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aL (aI, cr)
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aL (aI, cr)
+selectCodeEditor("fifo.v", 245, 134); // ch (w, cr)
+// Elapsed time: 190 seconds
+selectCodeEditor("fifo.v", 199, 192); // ch (w, cr)
+selectCodeEditor("fifo.v", 131, 182); // ch (w, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 257, 174, 991, 388, false, false, false, true, false); // f (i, cr) - Popup Trigger
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Leaf Cells (67), data_out_OBUF[0]_inst (OBUFT)]", 7, false); // bD (O, cr)
+// [GUI Memory]: 157 MB (+2217kb) [02:01:44]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,833 MB. GUI used memory: 100 MB. Current time: 4/26/20, 12:24:23 PM PDT
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 247, 256, 991, 388, false, false, false, true, false); // f (i, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, Popup.HeavyWeightWindow)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Leaf Cells (67), data_out_OBUF[3]_inst (OBUFT)]", 10, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Leaf Cells (67), data_out_OBUF[2]_inst (OBUFT)]", 9, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Nets (67), <const0>]", 3, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Nets (67), <const1>]", 4, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Leaf Cells (67), data_out_OBUF[0]_inst (OBUFT)]", 7, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Leaf Cells (67), data_out_OBUF[1]_inst (OBUFT)]", 8, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Leaf Cells (67), data_out_OBUF[0]_inst (OBUFT)]", 7, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Leaf Cells (67)]", 6, true); // bD (O, cr) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[fifo, Leaf Cells (67)]", 6, true); // bD (O, cr) - Node
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+selectButton(PAResourceItoN.NetlistSchematicView_SHOW_NETS_IN_THIS_SCHEMATIC, "67 Nets"); // h (f, cr)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// [Engine Memory]: 1,838 MB (+1071kb) [02:03:10]
+// Elapsed time: 36 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 29, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bB (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2053.180 ; gain = 0.000 
+// Tcl Message: [Sun Apr 26 12:25:48 2020] Launched impl_1... Run output will be captured here: D:/Programming/Git/cse125/Lab3/Lab3.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 16 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cr)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cr)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 10 seconds
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // i (c, cr)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "General", 0); // i (c, cr)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Nets", 2); // i (c, cr)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "General", 0); // i (c, cr)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cr)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aL (aI, cr)
+// Elapsed time: 21 seconds
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 219, 77); // n (q, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // i (h, cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 498ms to process. Increasing delay to 3000 ms.
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fifo.v", 2); // i (h, cr)
+// aj (cr): Implementation Completed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// g (cr): Close Design: addNotify
+selectButton(PAResourceAtoD.ClosePlanner_YES, "Yes"); // a (g)
+// bB (cr):  Close : addNotify
+dismissDialog("Close Design"); // g (cr)
+// TclEventType: DESIGN_CLOSE
+// Engine heap size: 1,839 MB. GUI used memory: 138 MB. Current time: 4/26/20, 12:26:56 PM PDT
+// TclEventType: CURR_DESIGN_SET
+dockFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA (aL, aN)
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,839 MB. GUI used memory: 71 MB. Current time: 4/26/20, 12:26:56 PM PDT
+// bB (cr):  Open Implemented Design : addNotify
+dismissDialog("Close"); // bB (cr)
+// Tcl Message: open_run impl_1 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,839 MB. GUI used memory: 72 MB. Current time: 4/26/20, 12:26:58 PM PDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: DESIGN_NEW
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1056 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2059.188 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2019.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 2059.188 ; gain = 0.000 
+// Tcl Message: Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 2059.188 ; gain = 0.000 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2059.188 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dQ' command handler elapsed time: 7 seconds
+// Device view-level: 0.1
+// Device view-level: 0.0
+dismissDialog("Open Implemented Design"); // bB (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cr)
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+dismissDialog("Elaborate Design"); // A (cr)
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7k70tfbv676-1 Top: fifo 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 2,173 MB (+254186kb) [02:04:40]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,173 MB. GUI used memory: 102 MB. Current time: 4/26/20, 12:27:13 PM PDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: DESIGN_NEW
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1973 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2333.234 ; gain = 204.672 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter DEPTH bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo_stage' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:70] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter STATE_HOLD bound to: 2'b00  	Parameter STATE_SI bound to: 2'b10  	Parameter STATE_SO bound to: 2'b01  	Parameter STATE_SI_SO bound to: 2'b11  
+// Tcl Message: INFO: [Synth 8-155] case statement is not full and has no default [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:89] INFO: [Synth 8-6155] done synthesizing module 'fifo_stage' (1#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:70] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo' (2#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2379.105 ; gain = 250.543 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2396.887 ; gain = 268.324 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2396.887 ; gain = 268.324 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2396.887 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2502.941 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2502.941 ; gain = 374.379 
+// Tcl Message: 8 Infos, 77 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2502.941 ; gain = 374.379 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// [GUI Memory]: 166 MB (+1002kb) [02:04:44]
+// Elapsed time: 10 seconds
+dismissDialog("Open Elaborated Design"); // bB (cr)
+floatFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic (2)"); // aA (aL, cr)
+// PAResourceOtoP.PAViews_SCHEMATIC: Schematic: float view
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 78 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 113 seconds
+selectCodeEditor("fifo.v", 636, 280); // ch (w, cr)
+// Elapsed time: 37 seconds
+selectCodeEditor("fifo.v", 66, 203); // ch (w, cr)
+// Elapsed time: 108 seconds
+selectCodeEditor("fifo.v", 278, 200); // ch (w, cr)
+selectCodeEditor("fifo.v", 153, 200); // ch (w, cr)
+// Elapsed time: 14 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 92 seconds
+selectCodeEditor("fifo.v", 75, 163); // ch (w, cr)
+selectCodeEditor("fifo.v", 32, 117); // ch (w, cr)
+selectCodeEditor("fifo.v", 31, 93); // ch (w, cr)
+selectCodeEditor("fifo.v", 31, 132); // ch (w, cr)
+selectCodeEditor("fifo.v", 108, 118); // ch (w, cr)
+selectCodeEditor("fifo.v", 35, 74); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'c'); // ch (w, cr)
+selectCodeEditor("fifo.v", 197, 102); // ch (w, cr)
+typeControlKey((HResource) null, "fifo.v", 'v'); // ch (w, cr)
+selectCodeEditor("fifo.v", 162, 93); // ch (w, cr)
+selectCodeEditor("fifo.v", 259, 96); // ch (w, cr)
+selectCodeEditor("fifo.v", 277, 164); // ch (w, cr)
+selectCodeEditor("fifo.v", 25, 95); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("fifo.v", 445, 213); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("fifo.v", 412, 179); // ch (w, cr)
+selectCodeEditor("fifo.v", 517, 159); // ch (w, cr)
+selectCodeEditor("fifo.v", 111, 178); // ch (w, cr)
+// Elapsed time: 34 seconds
+selectCodeEditor("fifo.v", 430, 246); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("fifo.v", 321, 176); // ch (w, cr)
+// Elapsed time: 23 seconds
+selectCodeEditor("fifo.v", 144, 180); // ch (w, cr)
+selectCodeEditor("fifo.v", 226, 182); // ch (w, cr)
+selectCodeEditor("fifo.v", 317, 183); // ch (w, cr)
+// Elapsed time: 24 seconds
+selectCodeEditor("fifo.v", 28, 76); // ch (w, cr)
+// Elapsed time: 212 seconds
+selectCodeEditor("fifo.v", 662, 174); // ch (w, cr)
+// Elapsed time: 200 seconds
+selectCodeEditor("fifo.v", 711, 158); // ch (w, cr)
+selectCodeEditor("fifo.v", 102, 116); // ch (w, cr)
+// Elapsed time: 50 seconds
+selectCodeEditor("fifo.v", 241, 103); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (ds, cr)
+// bB (cr):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2504.828 ; gain = 1.887 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,240 MB. GUI used memory: 104 MB. Current time: 4/26/20, 12:46:14 PM PDT
+// Engine heap size: 2,240 MB. GUI used memory: 104 MB. Current time: 4/26/20, 12:46:14 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1663 ms.
+dockFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic (2)"); // aA (aL, aN)
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter DEPTH bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo_stage' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:71] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter STATE_HOLD bound to: 2'b00  	Parameter STATE_SI bound to: 2'b10  	Parameter STATE_SO bound to: 2'b01  	Parameter STATE_SI_SO bound to: 2'b11  
+// Tcl Message: INFO: [Synth 8-155] case statement is not full and has no default [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:90] INFO: [Synth 8-6155] done synthesizing module 'fifo_stage' (1#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:71] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo' (2#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2536.773 ; gain = 33.832 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2554.648 ; gain = 51.707 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2554.648 ; gain = 51.707 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,240 MB. GUI used memory: 104 MB. Current time: 4/26/20, 12:46:15 PM PDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2509 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2554.648 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2605.586 ; gain = 102.645 
+dismissDialog("Reloading"); // bB (cr)
+selectButton(PAResourceQtoS.StaleMoreAction_OUT_OF_DATE_DETAILS, "details"); // h (ds, cr)
+selectButton(PAResourceQtoS.StaleMoreAction_FORCE_UP_TO_DATE, "Force up-to-date"); // h (n, ResizableWindow)
+// Tcl Message: set_property needs_refresh false [get_runs synth_1] 
+// Tcl Message: set_property needs_refresh false [get_runs impl_1] 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 42 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fifo.v", 2); // i (h, cr)
+// Elapsed time: 27 seconds
+selectCodeEditor("fifo.v", 196, 69); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (ds, cr)
+// bB (cr):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// TclEventType: ELABORATE_FAIL
+// Tcl Message: INFO: [Synth 8-994] pre_out is declared here [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:33] 
+// Tcl Message: ERROR: [Synth 8-993] assgin is an unknown type [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:39] 
+// Tcl Message: INFO: [Synth 8-2350] module fifo ignored due to previous errors [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: INFO: [Synth 8-2350] module fifo_stage ignored due to previous errors [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:71] 
+// Tcl Message: Failed to read verilog 'D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v' ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.  
+// S (cr): Critical Messages: addNotify
+dismissDialog("Reloading"); // bB (cr)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (S)
+dismissDialog("Critical Messages"); // S (cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("fifo.v", 79, 139); // ch (w, cr)
+selectCodeEditor("fifo.v", 223, 113); // ch (w, cr)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("fifo.v", 353, 103); // ch (w, cr)
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (ds, cr)
+// bB (cr):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2652.461 ; gain = 5.461 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// Engine heap size: 2,240 MB. GUI used memory: 106 MB. Current time: 4/26/20, 12:48:59 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1443 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,240 MB. GUI used memory: 106 MB. Current time: 4/26/20, 12:48:59 PM PDT
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter DEPTH bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo_stage' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:71] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter STATE_HOLD bound to: 2'b00  	Parameter STATE_SI bound to: 2'b10  	Parameter STATE_SO bound to: 2'b01  	Parameter STATE_SI_SO bound to: 2'b11  
+// Tcl Message: INFO: [Synth 8-155] case statement is not full and has no default [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:90] INFO: [Synth 8-6155] done synthesizing module 'fifo_stage' (1#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:71] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo' (2#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2674.051 ; gain = 27.051 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2697.895 ; gain = 50.895 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2697.895 ; gain = 50.895 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,240 MB. GUI used memory: 105 MB. Current time: 4/26/20, 12:49:01 PM PDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2403 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2697.895 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2754.543 ; gain = 107.543 
+// Elapsed time: 11 seconds
+dismissDialog("Reloading"); // bB (cr)
+selectButton(PAResourceQtoS.StaleMoreAction_OUT_OF_DATE_DETAILS, "details"); // h (ds, cr)
+selectButton(PAResourceQtoS.StaleMoreAction_FORCE_UP_TO_DATE, "Force up-to-date"); // h (n, ResizableWindow)
+// Tcl Message: set_property needs_refresh false [get_runs synth_1] 
+// Tcl Message: set_property needs_refresh false [get_runs impl_1] 
+// Elapsed time: 86 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+floatFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic (3)"); // aA (aL, cr)
+// PAResourceOtoP.PAViews_SCHEMATIC: Schematic: float view
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // E (f, aN)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// [GUI Memory]: 181 MB (+7130kb) [02:28:08]
+// Elapsed time: 106 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+// Elapsed time: 305 seconds
+selectCodeEditor("fifo.v", 90, 186); // ch (w, cr)
+selectCodeEditor("fifo.v", 35, 199); // ch (w, cr)
+selectCodeEditor("fifo.v", 90, 130); // ch (w, cr)
+selectCodeEditor("fifo.v", 66, 132); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (ds, cr)
+// bB (cr):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2754.543 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// Engine heap size: 2,240 MB. GUI used memory: 113 MB. Current time: 4/26/20, 12:58:12 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1477 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,240 MB. GUI used memory: 113 MB. Current time: 4/26/20, 12:58:12 PM PDT
+dockFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic (3)"); // aA (aL, aN)
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter DEPTH bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo_stage' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:69] 
+// Tcl Message: 	Parameter WIDTH bound to: 64 - type: integer  	Parameter STATE_HOLD bound to: 2'b00  	Parameter STATE_SI bound to: 2'b10  	Parameter STATE_SO bound to: 2'b01  	Parameter STATE_SI_SO bound to: 2'b11  
+// Tcl Message: INFO: [Synth 8-155] case statement is not full and has no default [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:88] INFO: [Synth 8-6155] done synthesizing module 'fifo_stage' (1#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:69] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo' (2#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2754.543 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2754.543 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2754.543 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,240 MB. GUI used memory: 113 MB. Current time: 4/26/20, 12:58:13 PM PDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2475 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2754.543 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2793.711 ; gain = 39.168 
+dismissDialog("Reloading"); // bB (cr)
