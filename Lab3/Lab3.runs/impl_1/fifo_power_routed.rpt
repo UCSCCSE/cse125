@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Apr 26 12:26:51 2020
+| Date             : Sun Apr 26 20:05:20 2020
 | Host             : DESKTOP-G7LSD5Q running 64-bit major release  (build 9200)
 | Command          : report_power -file fifo_power_routed.rpt -pb fifo_power_summary_routed.pb -rpx fifo_power_routed.rpx
 | Design           : fifo
@@ -54,7 +54,7 @@ Table of Contents
 +--------------+-----------+----------+-----------+-----------------+
 | Slice Logic  |     0.000 |        2 |       --- |             --- |
 |   Others     |     0.000 |        2 |       --- |             --- |
-| I/O          |     0.000 |       65 |       300 |           21.67 |
+| I/O          |     0.000 |       66 |       300 |           22.00 |
 | Static Power |     0.079 |          |           |                 |
 | Total        |     0.079 |          |           |                 |
 +--------------+-----------+----------+-----------+-----------------+

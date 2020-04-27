@@ -60,18 +60,23 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 1
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint D:/Programming/Git/cse125/Lab3/Lab3.runs/impl_1/fifo.dcp
+  create_project -in_memory -part xc7k70tfbv676-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir D:/Programming/Git/cse125/Lab3/Lab3.cache/wt [current_project]
   set_property parent.project_path D:/Programming/Git/cse125/Lab3/Lab3.xpr [current_project]
   set_property ip_output_repo D:/Programming/Git/cse125/Lab3/Lab3.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet D:/Programming/Git/cse125/Lab3/Lab3.runs/synth_1/fifo.dcp
+  link_design -top fifo -part xc7k70tfbv676-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
