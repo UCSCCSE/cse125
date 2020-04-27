@@ -32,7 +32,7 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
     );
     wire [WIDTH-1:0] pre_out[DEPTH-1:0];
     wire [WIDTH-1:0] hold_data[DEPTH-1:0];
-    wire [WIDTH-1:0] cur_out[DEPTH-1:0];
+    wire [WIDTH-1:0] data_output[DEPTH-1:0];
     reg [WIDTH-1:0] data_input[DEPTH-1:0];
     integer ptr_shift_in=0;
     integer ptr_shift_out=0;
@@ -57,7 +57,7 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
         end
         else if(shift_out&& ~empty)begin
             select   <= 2'b01;
-            data_out<= cur_out[ptr_shift_out];
+            data_out<= data_output[ptr_shift_out];
             ptr_shift_out <= ptr_shift_out+1;
             ptr_diff <= ptr_diff-1;
         end
@@ -88,19 +88,19 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
    
     
     //assign select = full | empty | shift_in | shift_out; 
-   // assign pre_out[0]= cur_out[DEPTH-1];
+   // assign pre_out[0]= data_output[DEPTH-1];
     genvar j; 
 
     generate
         for(j=1;j<DEPTH;j=j+1)begin: DATA_OUT_CONNECT       
-            assign pre_out[j]=cur_out[j-1];
+            assign pre_out[j]=data_output[j-1];
         end
     endgenerate
           
     genvar i;
     generate
         for(i =0; i<DEPTH;i=i+1)begin: cur_hold
-            assign hold_data[i]=cur_out[i];
+            assign hold_data[i]=data_output[i];
         end
     endgenerate
     
@@ -109,7 +109,7 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
         for(i =0; i<DEPTH;i=i+1)begin: FIFO
                
                    
-            fifo_stage FS0(.clk(clk), .si(data_input[i]),.hold(hold_data[i]), .so(pre_out[i]), .select(select), .out(cur_out[i]));
+            fifo_stage FS0(.clk(clk), .si(data_input[i]),.hold(hold_data[i]), .so(pre_out[i]), .select(select), .out(data_output[i]));
         
         end
     endgenerate
