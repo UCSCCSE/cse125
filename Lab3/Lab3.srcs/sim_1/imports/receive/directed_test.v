@@ -170,6 +170,43 @@ module directed_test(
         @(posedge clk);
         $fdisplay(outfile, "%d", data_out);
         @(posedge clk);
+        for(i=0;i<4;i=i+1)begin
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
+        end
+        @(posedge clk);
+         shift_out = 1'b1;
+        shift_in = 1'b0;
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
+        @(posedge clk);
+        $fdisplay(outfile, "%d", data_out);
+        @(posedge clk);
+        
+        @(posedge clk);
+         shift_out = 1'b1;
+        shift_in = 1'b0;
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
+        @(posedge clk);
+        $fdisplay(outfile, "%d", data_out);
+        @(posedge clk);
+        
+        @(posedge clk);
+         shift_out = 1'b1;
+        shift_in = 1'b0;
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
+        @(posedge clk);
+        $fdisplay(outfile, "%d", data_out);
+        @(posedge clk);
+        
+        
+        
         
     end
         

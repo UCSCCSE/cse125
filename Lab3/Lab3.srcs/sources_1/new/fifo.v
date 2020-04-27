@@ -57,7 +57,7 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
         end
         else if(shift_out && !empty)begin
             select   <= 2'b01;
-            data_out<= data_output[ptr_shift_out];
+            data_out<= data_output[0];
             ptr_shift_out <= ptr_shift_out+1;
             ptr_diff <= ptr_diff-1;
         end
@@ -98,8 +98,8 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
     genvar j; 
 
     generate
-        for(j=1;j<DEPTH;j=j+1)begin: DATA_OUT_CONNECT       
-            assign pre_out[j]=data_output[j-1];
+        for(j=0;j<DEPTH-1;j=j+1)begin: DATA_OUT_CONNECT       
+            assign pre_out[j]=data_output[j+1];
         end
     endgenerate
           
