@@ -17,10 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 1
-set_param synth.incrementalSynthesisCache C:/Users/atenl/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-2244-DESKTOP-G7LSD5Q/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7k70tfbv676-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -41,6 +37,9 @@ read_verilog -library xil_defaultlib D:/Programming/Git/cse125/Lab3/Lab3.srcs/so
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc D:/Programming/Git/cse125/Lab3/Lab3.srcs/constrs_1/new/lab3test.xdc
+set_property used_in_implementation false [get_files D:/Programming/Git/cse125/Lab3/Lab3.srcs/constrs_1/new/lab3test.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

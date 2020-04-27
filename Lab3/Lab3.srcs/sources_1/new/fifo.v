@@ -43,29 +43,30 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
     xor (chose, shift_in&&empty , shifit_out&&empty);
     always @(posedge clk or negedge res_n )begin
         if(!res_n)begin
-            data_out <=0;
+           // data_out <=0;
             ptr_shift_in <=0;
             ptr_shift_out<=0;
             ptr_diff<=0;
         end
         else begin
-        if(shift_in && ~full)begin
+        if(shift_in && !full)begin
             select  = 2'b10;
             data_input[ptr_shift_in] <= data_in;
             ptr_shift_in<=ptr_shift_in+1;
             ptr_diff <= ptr_diff+1;
         end
-        else if(shift_out&& ~empty)begin
+        else if(shift_out && !empty)begin
             select   <= 2'b01;
             data_out<= data_output[ptr_shift_out];
             ptr_shift_out <= ptr_shift_out+1;
             ptr_diff <= ptr_diff-1;
         end
-        else if(~shift_in && ~shift_out)begin
+        else if(!shift_in && !shift_out)begin
             select   <= 2'b00;
         end
         else if(shift_in && shift_out)begin
             select   <= 2'b11;
+            data_out = data_in;
         end
         
         
@@ -78,8 +79,13 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
         
         if(ptr_diff == 0)begin
             empty <=1;
+            full  <=0;
         end
-        else if(ptr_diff == DEPTH-1)begin
+        else if(ptr_diff>0 &&  ptr_diff<DEPTH)begin
+            empty <=0;
+            full  <=0;
+        end
+        else if(ptr_diff == DEPTH)begin
             full <= 1;
         end
         end
@@ -133,17 +139,17 @@ output reg [WIDTH-1:0]out
 wire [WIDTH-1:0] D_in;
 reg  [1:0] current_state;
 reg  [1:0] next_state;
-parameter STATE_HOLD  = 2'b00;
-parameter STATE_SI    = 2'b10;
-parameter STATE_SO    = 2'b01;
-parameter STATE_SI_SO = 2'b11;
+parameter HOLD  = 2'b00;
+parameter SI    = 2'b10;
+parameter SO    = 2'b01;
+parameter SI_SO = 2'b11;
 
 
 always @(posedge clk)begin
     case (select)
-        STATE_HOLD:out <= hold;
-        STATE_SI  :out <= si;
-        STATE_SO  :out <= so;
+        HOLD:out <= hold;
+        SI  :out <= si;
+        SO  :out <= so;
         
     endcase
 end
