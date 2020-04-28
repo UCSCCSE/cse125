@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1588112362">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1588113945">
   <File Type="PA-TCL" Name="fifo.tcl"/>
   <File Type="REPORTS-TCL" Name="fifo_reports.tcl"/>
   <File Type="RDS-RDS" Name="fifo.vds"/>

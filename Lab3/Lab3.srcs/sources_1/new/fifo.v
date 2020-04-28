@@ -59,15 +59,7 @@ module fifo #(parameter WIDTH =16, parameter DEPTH = 8)(
         end
         else begin
           
-        if(shift_in && !full)begin
-            select  = 2'b10;
-            //data_temp_B<=data_in;
-            //ptr_shift_in = ptr_shift_in % DEPTH;
-            data_input[ptr_shift_in] = data_in;
-            ptr_shift_in=ptr_shift_in+1;
-            ptr_diff = ptr_diff+1;
-          
-        end
+        
          if(shift_out && !empty)begin
             select   = 2'b01;
             //ptr_shift_out = ptr_shift_out % DEPTH;
@@ -83,6 +75,16 @@ module fifo #(parameter WIDTH =16, parameter DEPTH = 8)(
             ptr_shift_in = ptr_shift_in -1;
             ptr_diff = ptr_diff-1;
         end
+        
+        if(shift_in && !full)begin
+            select  = 2'b10;
+            //data_temp_B<=data_in;
+            //ptr_shift_in = ptr_shift_in % DEPTH;
+            data_input[ptr_shift_in] = data_in;
+            ptr_shift_in=ptr_shift_in+1;
+            ptr_diff = ptr_diff+1;
+          
+        end
          if(!shift_in && !shift_out)begin
             select   = 2'b00;
              for(j =0; j<DEPTH;j=j+1)begin: cur_hold
@@ -91,28 +93,7 @@ module fifo #(parameter WIDTH =16, parameter DEPTH = 8)(
         end
         if(shift_in && shift_out && !full)begin
             select   = 2'b11;
-//            if(shift_out)begin
-//            ptr_shift_out = ptr_shift_out % DEPTH;
-//            data_out = data_output[0];
-//            for(j=0;j<DEPTH-1;j=j+1)begin    
-//                pre_out[j]=data_output[j+1];
-//            end
-//           //
-//            for(j=0;j<DEPTH-1;j=j+1)begin: DATA_OUT_IN      
-//                data_input[j]=data_input[j+1];
-//            end
-//            //data_input[ptr_shift_in]<={WIDTH{1'bx}};
-//           // ptr_shift_in = ptr_shift_in-1;
-//            //data_input[ptr_shift_in+1]<={WIDTH{1'bx}};
-//           // ptr_shift_out <= ptr_shift_out+1;
-//            ptr_diff <= ptr_diff-1;
-//            end
-//            if(shift_in)begin
-//                ptr_shift_in = ptr_shift_in % DEPTH;
-//                data_input[ptr_shift_in] = data_in;
-//                ptr_shift_in<=ptr_shift_in+1;
-//                ptr_diff <= ptr_diff+1;
-//            end
+
         end
           
         if(ptr_diff == 0)begin
