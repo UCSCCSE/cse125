@@ -55,37 +55,31 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
             ptr_shift_in<=ptr_shift_in+1;
             ptr_diff <= ptr_diff+1;
         end
-        else if(shift_out && !empty)begin
+        if(shift_out && !empty)begin
             select   <= 2'b01;
-            data_out<= data_output[0];
+            
             ptr_shift_out <= ptr_shift_out+1;
             ptr_diff <= ptr_diff-1;
         end
-        else if(!shift_in && !shift_out)begin
+        if(!shift_in && !shift_out)begin
             select   <= 2'b00;
         end
-        else if(shift_in && shift_out)begin
-            select   <= 2'b11;
-            data_out = data_in;
-        end
+       // if(shift_in && shift_out)begin
+      //      select   <= 2'b11;
+            //data_out = data_in;
+        //end
         
-        
-        if(ptr_shift_in ==0)begin
-            data_input[0] <= data_in;
-        end
-        else begin
-            data_input[ptr_shift_in] <= data_in;
-        end
+   
         
         if(ptr_diff == 0)begin
             empty <=1;
             full  <=0;
         end
-        else if(ptr_diff>0 &&  ptr_diff<DEPTH)begin
+         if(ptr_diff>0 &&  ptr_diff<DEPTH)begin
             empty <=0;
             full  <=0;
         end
-        else if(ptr_diff == DEPTH)begin
+         if(ptr_diff == DEPTH)begin
             full <= 1;
         end
         end
@@ -119,8 +113,9 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
         
         end
     endgenerate
-    
-    
+    always @(data_output[0])begin
+        data_out<= data_output[0];
+    end
 endmodule
 
 
