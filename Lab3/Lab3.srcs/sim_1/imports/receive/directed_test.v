@@ -55,7 +55,7 @@ module directed_test(
         //second case shiftin and out empty
         data_in = test_data[0][63:0];
         shift_out = 1'b1;
-        shift_in = 1'b1;
+        shift_in = 1'b1;     //first in
         @(posedge clk);
         shift_out = 1'b0;
         shift_in = 1'b0;
@@ -65,7 +65,7 @@ module directed_test(
         //third case shift in
         data_in = test_data[1][63:0];
         shift_out = 1'b0;
-        shift_in = 1'b1;
+        shift_in = 1'b1;      //second in
         @(posedge clk);
         shift_out = 1'b0;
         shift_in = 1'b0;
@@ -75,7 +75,7 @@ module directed_test(
         //fourth case shift in
         data_in = test_data[2][63:0];
         shift_out = 1'b0;
-        shift_in = 1'b1;
+        shift_in = 1'b1;    //third in
         @(posedge clk);
         shift_out = 1'b0;
         shift_in = 1'b0;
@@ -95,7 +95,10 @@ module directed_test(
         //sixth case shift in
         data_in = test_data[4][63:0];
         shift_out = 1'b0;
-        shift_in = 1'b1;   
+        shift_in = 1'b1;     // fourth in
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
         @(posedge clk);
         $fdisplay(outfile, "%d", data_out);
         @(posedge clk);
