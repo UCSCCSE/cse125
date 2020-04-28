@@ -54,7 +54,7 @@ module directed_test(
         @(posedge clk);
         //second case shiftin and out empty
         data_in = test_data[0][63:0];
-        shift_out = 1'b1;
+        shift_out = 1'b0;
         shift_in = 1'b1;     //first in
         @(posedge clk);
         shift_out = 1'b0;
