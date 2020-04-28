@@ -104,18 +104,28 @@ module directed_test #(parameter WIDTH=16,parameter DEPTH=8
         data_in = test_data[4][WIDTH-1:0];
         shift_out = 1'b0;
         shift_in = 1'b1;
-        
-        
-        for(i=0;i<1;i=i+1)begin
         @(posedge clk);
         shift_out = 1'b0;
-        if(shift_in == 1'b1)begin
         shift_in = 1'b0;
-        end
-        else begin
-        shift_in = 1'b1;
-        end
-        end
+        @(posedge clk);
+         shift_out = 1'b0;
+        shift_in = 1'b0;
+//        for(i=0;i<1;i=i+1)begin
+//            @(posedge clk);
+//            shift_out = 1'b0;
+//            if(shift_in == 1'b1)begin
+//                shift_in = 1'b0;
+//            end
+//            else begin
+//                shift_in = 1'b1;
+//            end
+//        end
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
         @(posedge clk);
         //$fdisplay(outfile, "%b", data_out);
         @(posedge clk);
@@ -219,6 +229,28 @@ module directed_test #(parameter WIDTH=16,parameter DEPTH=8
             $fdisplay(outfile, "%b", data_out);
             @(posedge clk);
         end
+        
+        
+         @(posedge clk);
+        //12th case shift out
+        shift_out = 1'b1;
+        shift_in = 1'b0;
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
+        @(posedge clk);
+        $fdisplay(outfile, "%b", data_out);
+        @(posedge clk);
+         @(posedge clk);
+        //12th case shift out
+        shift_out = 1'b1;
+        shift_in = 1'b0;
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
+        @(posedge clk);
+        $fdisplay(outfile, "%b", data_out);
+        @(posedge clk);
         $fclose(outfile); 
         #100;
         $stop;
