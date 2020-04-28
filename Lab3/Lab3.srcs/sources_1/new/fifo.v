@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
+module fifo #(parameter WIDTH =16, parameter DEPTH = 8)(
     input clk,
     input res_n,
     input shift_in,
@@ -34,41 +34,55 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
     reg [WIDTH-1:0] hold_data[DEPTH-1:0];
     wire [WIDTH-1:0] data_output[DEPTH-1:0];
     reg [WIDTH-1:0] data_input[DEPTH-1:0];
+    reg [WIDTH-1:0] data_temp_A[DEPTH-1:0];
+    reg [WIDTH-1:0] data_temp_B;
     integer ptr_shift_in=0;
     integer ptr_shift_out=0;
     integer j; 
+    integer k;
+    integer temp_full;
     reg [WIDTH-1:0] ptr_diff;
     reg [1:0]select;
     reg choose;
     reg can_hold, can_shift_in,can_shift_out,invalid;
     xor (chose, shift_in&&empty , shifit_out&&empty);
+    
+    
     always @(posedge clk or negedge res_n )begin
         if(!res_n)begin
            // data_out <=0;
             ptr_shift_in <=0;
-            ptr_shift_out<=0;
+            //ptr_shift_out<=0;
+            //k=0;
+           // temp_full=0;
             ptr_diff<=0;
         end
         else begin
+          
         if(shift_in && !full)begin
             select  = 2'b10;
-            ptr_shift_in = ptr_shift_in % DEPTH;
+            //data_temp_B<=data_in;
+            //ptr_shift_in = ptr_shift_in % DEPTH;
             data_input[ptr_shift_in] <= data_in;
             ptr_shift_in<=ptr_shift_in+1;
             ptr_diff <= ptr_diff+1;
+          
         end
-        else if(shift_out && !empty)begin
+         if(shift_out && !empty)begin
             select   <= 2'b01;
-            ptr_shift_out = ptr_shift_out % DEPTH;
+            //ptr_shift_out = ptr_shift_out % DEPTH;
             data_out = data_output[0];
             for(j=0;j<DEPTH-1;j=j+1)begin: DATA_OUT_CONNECT       
                 pre_out[j]=data_output[j+1];
+            end
+            for(j=0;j<DEPTH-1;j=j+1)begin: DATA_IN       
+                data_input[j]=data_input[j+1];
             end
             //ptr_shift_out <= ptr_shift_out+1;
             ptr_shift_in <= ptr_shift_in -1;
             ptr_diff <= ptr_diff-1;
         end
-        else if(!shift_in && !shift_out)begin
+         if(!shift_in && !shift_out)begin
             select   <= 2'b00;
              for(j =0; j<DEPTH;j=j+1)begin: cur_hold
                 hold_data[j]=data_output[j];
@@ -76,21 +90,21 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
         end
         if(shift_in && shift_out && !full)begin
             select   <= 2'b11;
-            if(shift_out)begin
-            ptr_shift_out = ptr_shift_out % DEPTH;
-            data_out = data_output[0];
-            for(j=0;j<DEPTH-1;j=j+1)begin    
-                pre_out[j]=data_output[j+1];
-            end
-            ptr_shift_out <= ptr_shift_out+1;
-            ptr_diff <= ptr_diff-1;
-            end
-            if(shift_in)begin
-                ptr_shift_in = ptr_shift_in % DEPTH;
-                data_input[ptr_shift_in] <= data_in;
-                ptr_shift_in<=ptr_shift_in+1;
-                ptr_diff <= ptr_diff+1;
-            end
+//            if(shift_out)begin
+//            ptr_shift_out = ptr_shift_out % DEPTH;
+//            data_out = data_output[0];
+//            for(j=0;j<DEPTH-1;j=j+1)begin    
+//                pre_out[j]=data_output[j+1];
+//            end
+//            ptr_shift_out <= ptr_shift_out+1;
+//            ptr_diff <= ptr_diff-1;
+//            end
+//            if(shift_in)begin
+//                ptr_shift_in = ptr_shift_in % DEPTH;
+//                data_input[ptr_shift_in] <= data_in;
+//                ptr_shift_in<=ptr_shift_in+1;
+//                ptr_diff <= ptr_diff+1;
+//            end
         end
           
         if(ptr_diff == 0)begin
@@ -103,27 +117,11 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
         end
          if(ptr_diff == DEPTH)begin
             full <= 1;
+            
         end
         end
     end
-    
-   
-    
-    //assign select = full | empty | shift_in | shift_out; 
-   // assign pre_out[0]= data_output[DEPTH-1];
-    
-   
-    always @(*)begin
-        
-       
-       
-        
-       
-       
-        
-        
-        
-    end
+
     
     genvar i;
     generate
@@ -143,7 +141,7 @@ endmodule
 
 
 
-module fifo_stage #(parameter WIDTH = 64)(
+module fifo_stage #(parameter WIDTH = 16)(
 input clk,
 input [WIDTH-1:0]si,
 input [WIDTH-1:0]hold,
@@ -158,7 +156,7 @@ reg  [1:0] next_state;
 parameter HOLD  = 2'b00;
 parameter SI    = 2'b10;
 parameter SO    = 2'b01;
-parameter SI_SO = 2'b11;
+
 
 
 always @(posedge clk)begin
