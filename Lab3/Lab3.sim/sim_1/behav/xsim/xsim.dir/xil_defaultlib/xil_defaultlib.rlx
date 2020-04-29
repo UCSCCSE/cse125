@@ -4,5 +4,5 @@ Nov  6 2019
 21:57:16
 D:/Programming/Git/cse125/Lab3/Lab3.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
 D:/Programming/Git/cse125/Lab3/Lab3.srcs/sim_1/imports/receive/directed_test.v,1588112183,verilog,,,,directed_test,,,,,,,,
-D:/Programming/Git/cse125/Lab3/Lab3.srcs/sim_1/imports/receive/random_test.v,1588122346,verilog,,,,random_test,,,,,,,,
-D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v,1588114415,verilog,,D:/Programming/Git/cse125/Lab3/Lab3.srcs/sim_1/imports/receive/random_test.v,,fifo;fifo_stage,,,,,,,,
+D:/Programming/Git/cse125/Lab3/Lab3.srcs/sim_1/imports/receive/random_test.v,1588153551,verilog,,,,random_test,,,,,,,,
+D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v,1588152809,verilog,,D:/Programming/Git/cse125/Lab3/Lab3.srcs/sim_1/imports/receive/random_test.v,,fifo;fifo_stage,,,,,,,,

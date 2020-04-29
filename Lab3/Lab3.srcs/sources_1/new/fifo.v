@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fifo #(parameter WIDTH =16, parameter DEPTH = 8)(
+module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
     input clk,
     input res_n,
     input shift_in,
@@ -36,7 +36,7 @@ module fifo #(parameter WIDTH =16, parameter DEPTH = 8)(
     reg [WIDTH-1:0] data_input[DEPTH-1:0];
     reg [WIDTH-1:0] data_temp_A[DEPTH-1:0];
     reg [WIDTH-1:0] data_temp_B;
-    integer ptr_shift_in=0;
+    //integer ptr_shift_in=0;
     integer ptr_shift_out=0;
     integer j; 
     integer k;
@@ -50,62 +50,73 @@ module fifo #(parameter WIDTH =16, parameter DEPTH = 8)(
     
     always @(posedge clk or negedge res_n )begin
         if(!res_n)begin
-           // data_out <=0;
-            ptr_shift_in =0;
+            //data_out <=0;
+            //ptr_shift_in <=0;
             //ptr_shift_out<=0;
             //k=0;
            // temp_full=0;
-            ptr_diff=0;
+            ptr_diff<=0;
         end
         else begin
           
         
          if(shift_out && !empty)begin
-            select   = 2'b01;
+            select   <= 2'b01;
             //ptr_shift_out = ptr_shift_out % DEPTH;
-            data_out = data_output[0];
-            for(j=0;j<DEPTH-1;j=j+1)begin: DATA_OUT_CONNECT       
-                pre_out[j]=data_output[j+1];
+            data_out <= data_output[0];
+            for(j=0;j<DEPTH;j=j+1)begin: DATA_OUT_CONNECT       
+                pre_out[j]<=data_output[j+1];
             end
-            for(j=0;j<DEPTH-1;j=j+1)begin: DATA_IN       
-                data_input[j]=data_input[j+1];
+            for(j=0;j<DEPTH;j=j+1)begin: DATA_IN       
+                data_input[j]<=data_input[j+1];
             end
            // data_input[ptr_shift_in]<={WIDTH{1'bx}};
             //ptr_shift_out <= ptr_shift_out+1;
-            ptr_shift_in = ptr_shift_in -1;
-            ptr_diff = ptr_diff-1;
+            //ptr_shift_in <= ptr_shift_in -1;
+            if(!shift_in)
+                ptr_diff <= ptr_diff-1;
         end
         
-        if(shift_in && !full)begin
-            select  = 2'b10;
+        if(shift_in && !full && !shift_out)begin
+            select  <= 2'b10;
             //data_temp_B<=data_in;
             //ptr_shift_in = ptr_shift_in % DEPTH;
-            data_input[ptr_shift_in] = data_in;
-            ptr_shift_in=ptr_shift_in+1;
-            ptr_diff = ptr_diff+1;
-          
+            data_input[ptr_diff] <= data_in;
+            //ptr_shift_in<=ptr_shift_in+1;
+            ptr_diff <= ptr_diff+1;
         end
+        if(shift_in && !full && shift_out)begin
+            select  <= 2'b10;
+            //data_temp_B<=data_in;
+            //ptr_shift_in = ptr_shift_in % DEPTH;
+            if(!empty)
+                data_input[ptr_diff-1] <= data_in;
+            
+            //ptr_shift_in<=ptr_shift_in+1;
+            if(empty)begin
+                 data_input[ptr_diff] <= data_in;
+                 ptr_diff <= ptr_diff+1;
+            end
+            //ptr_diff <= ptr_diff;
+        end
+        
          if(!shift_in && !shift_out)begin
-            select   = 2'b00;
+            select   <= 2'b00;
              for(j =0; j<DEPTH;j=j+1)begin: cur_hold
-                hold_data[j]=data_output[j];
+                hold_data[j]<=data_output[j];
              end
         end
-        if(shift_in && shift_out && !full)begin
-            select   = 2'b11;
-
-        end
-          
+        
         if(ptr_diff == 0)begin
-            empty =1;
-            full  =0;
+            empty <=1'b1;
+            full  <=1'b0;
         end
          if(ptr_diff>0 &&  ptr_diff<DEPTH)begin
-            empty =0;
-            full  =0;
+            empty <=1'b0;
+            full  <=1'b0;
         end
          if(ptr_diff == DEPTH)begin
-            full = 1;
+            full <= 1'b1;
             
         end
         end
@@ -130,7 +141,7 @@ endmodule
 
 
 
-module fifo_stage #(parameter WIDTH = 16)(
+module fifo_stage #(parameter WIDTH = 64)(
 input clk,
 input [WIDTH-1:0]si,
 input [WIDTH-1:0]hold,
@@ -154,7 +165,7 @@ always @(posedge clk)begin
         SI  :out = si;
         SO  :out = so;
         SI_SO: begin
-        out=so;
+        out <= so;
         //out <=si;
         end
     endcase

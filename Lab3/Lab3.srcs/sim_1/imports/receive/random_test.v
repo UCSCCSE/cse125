@@ -20,19 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module random_test#(WIDTH = 16
+module random_test(
 
     );
-    reg [WIDTH-1:0] test_data [0:1000];
-    reg clk, res_n, shift_in, shift_out;
-    reg [WIDTH-1:0] data_in;
-    wire[WIDTH-1:0] data_out;
+    reg [63:0] test_data [0:1000];
+    reg clk, res_n, shift_in, shift_out, rmsi, rmso;
+    reg [63:0] data_in;
+    wire[63:0] data_out;
     wire full, empty;
     integer outfile;
     integer i;
     integer f1, f2, a, b;
-    reg [WIDTH-1:0] answer;
-    reg [WIDTH-1:0] expect;
+    reg [63:0] answer;
+    reg [63:0] expect;
     fifo dut(.clk(clk), .res_n(res_n), .shift_in(shift_in), .shift_out(shift_out), .data_in(data_in), .full(full), .empty(empty), .data_out(data_out));
     
     always 
@@ -45,35 +45,36 @@ module random_test#(WIDTH = 16
         clk = 0;
         res_n = 0;
         @(posedge clk); @(posedge clk); #1 res_n = 1;
-       // data_in = test_data[0][WIDTH-1:0];
+        @(posedge clk);
+        //data_in = test_data[0][63:0];
         shift_out = 1'b0;
         shift_in = 1'b0;
         @(posedge clk);
         shift_out = 1'b0;
         shift_in = 1'b0;
         @(posedge clk);
-        for(i=0;i<100;i=i+1)begin
-             @(posedge clk);
-            data_in = test_data[i][WIDTH-1:0];
+        for(i=0;i<1000;i=i+1)begin
+            data_in = test_data[i][63:0];
             shift_out = {$random+9} % 2;
             shift_in = {$random} % 2;
-            if((shift_in == 1'b1) && (!full ))
+            if(full)
+                shift_in = 1'b0;
+            rmsi = shift_in;
+            rmso = shift_out;
+            if((shift_in == 1'b1) && (full != 1'b1))
             begin
-                //data_in = test_data[i][WIDTH-1:0];
+                //data_in = test_data[i][63:0];
             end
             else
             begin
                 i = i-1;
             end
-//            @(posedge clk);
-//            shift_out = 1'b0;
-//            shift_in = 1'b0; 
-//            @(posedge clk);
-            if((shift_out == 1'b1) && (!empty ))
-                $fdisplay(outfile, "%b", data_out);
             @(posedge clk);
             shift_out = 1'b0;
-            shift_in = 1'b0;  
+            shift_in = 1'b0;
+            //@(posedge clk);
+            if((rmso == 1'b1) && (empty != 1'b1))
+            $fdisplay(outfile, "%b", data_out);
             @(posedge clk);
         end
         while(empty != 1'b1)
@@ -83,7 +84,6 @@ module random_test#(WIDTH = 16
             @(posedge clk);
             shift_out = 1'b0;
             shift_in = 1'b0;  
-            @(posedge clk);
             $fdisplay(outfile, "%b", data_out);
             @(posedge clk);
         end 
@@ -91,8 +91,8 @@ module random_test#(WIDTH = 16
         f1 = $fopen("D:\\Programming\\Git\\cse125\\Lab3\\randominput.txt", "r");
         f2 = $fopen("D:\\Programming\\Git\\cse125\\Lab3\\randomout.txt", "r");
         while(!$feof(f1) || !$feof(f2))begin
-            a = $fscanf(f1," %d ", answer);
-            b = $fscanf(f2," %d ", expect);
+            a = $fscanf(f1," %b ", expect);
+            b = $fscanf(f2," %b ", answer);
             if(answer != expect) begin
                 $display("answer is :%b, expect:%b", answer, expect);
             end
