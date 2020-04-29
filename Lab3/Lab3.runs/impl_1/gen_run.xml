@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1588113945">
+<GenRun Id="impl_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1588118469">
   <File Type="BITSTR-BMM" Name="fifo_bd.bmm"/>
   <File Type="ROUTE-PWR" Name="fifo_power_routed.rpt"/>
   <File Type="PA-TCL" Name="fifo.tcl"/>

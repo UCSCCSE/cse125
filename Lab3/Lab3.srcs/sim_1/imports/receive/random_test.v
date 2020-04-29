@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module random_test(
+module random_test#(WIDTH = 16
 
     );
     reg [WIDTH-1:0] test_data [0:1000];
@@ -41,36 +41,60 @@ module random_test(
     initial begin
         
         $readmemb("randominput.txt", test_data);
-        outfile = $fopen("D:\\CSE125\\cse125\\Lab3\\randomout.txt", "w");
+        outfile = $fopen("D:\\Programming\\Git\\cse125\\Lab3\\randomout.txt", "w");
         clk = 0;
         res_n = 0;
         @(posedge clk); @(posedge clk); #1 res_n = 1;
-        for(i=0;i<1000;i=i+1)begin
-            shift_out = {$random} % 2;
+       // data_in = test_data[0][WIDTH-1:0];
+        shift_out = 1'b0;
+        shift_in = 1'b0;
+        @(posedge clk);
+        shift_out = 1'b0;
+        shift_in = 1'b0;
+        @(posedge clk);
+        for(i=0;i<100;i=i+1)begin
+             @(posedge clk);
+            data_in = test_data[i][WIDTH-1:0];
+            shift_out = {$random+9} % 2;
             shift_in = {$random} % 2;
-            if((shift_in == 1'b1) && (full != 1'b1))
+            if((shift_in == 1'b1) && (!full ))
             begin
-                data_in = test_data[i][WIDTH-1:0];
+                //data_in = test_data[i][WIDTH-1:0];
             end
-            if((shift_out == 1'b1) && (shift_in == 1'b0))
+            else
             begin
                 i = i-1;
             end
+//            @(posedge clk);
+//            shift_out = 1'b0;
+//            shift_in = 1'b0; 
+//            @(posedge clk);
+            if((shift_out == 1'b1) && (!empty ))
+                $fdisplay(outfile, "%b", data_out);
             @(posedge clk);
             shift_out = 1'b0;
+            shift_in = 1'b0;  
+            @(posedge clk);
+        end
+        while(empty != 1'b1)
+        begin
+            shift_out = 1'b1;
             shift_in = 1'b0;
+            @(posedge clk);
+            shift_out = 1'b0;
+            shift_in = 1'b0;  
             @(posedge clk);
             $fdisplay(outfile, "%b", data_out);
             @(posedge clk);
-        end
+        end 
         $fclose(outfile); 
-        f1 = $fopen("D:\\CSE125\\cse125\\Lab3\\randominput.txt", "r");
-        f2 = $fopen("D:\\CSE125\\cse125\\Lab3\\randomout.txt", "r");
+        f1 = $fopen("D:\\Programming\\Git\\cse125\\Lab3\\randominput.txt", "r");
+        f2 = $fopen("D:\\Programming\\Git\\cse125\\Lab3\\randomout.txt", "r");
         while(!$feof(f1) || !$feof(f2))begin
             a = $fscanf(f1," %d ", answer);
             b = $fscanf(f2," %d ", expect);
             if(answer != expect) begin
-                $display("value is :%b, expect:%b", answer, expect);
+                $display("answer is :%b, expect:%b", answer, expect);
             end
         end
         $display("test done");
