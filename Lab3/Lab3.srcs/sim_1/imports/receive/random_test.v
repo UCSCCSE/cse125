@@ -20,41 +20,50 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module random_test(
+module random_test#(WIDTH =32
 
     );
-    reg [63:0] test_data [0:1000];
+    integer seed =7;
+    parameter Test_num = 1000;
+    reg [WIDTH-1:0] test_data [0:Test_num];
     reg clk, res_n, shift_in, shift_out, rmsi, rmso;
-    reg [63:0] data_in;
-    wire[63:0] data_out;
+    reg [WIDTH-1:0] data_in;
+    wire[WIDTH-1:0] data_out;
     wire full, empty;
     integer outfile;
-    integer i;
-    integer f1, f2, a, b;
-    reg [63:0] answer;
-    reg [63:0] expect;
+    integer i, index;
+    integer f1, f2, a, b,rand;
+    reg [WIDTH-1:0] answer;
+    reg [WIDTH-1:0] expect;
     fifo dut(.clk(clk), .res_n(res_n), .shift_in(shift_in), .shift_out(shift_out), .data_in(data_in), .full(full), .empty(empty), .data_out(data_out));
     
     always 
         #5 clk = !clk;
         
     initial begin
-        
-        $readmemb("randominput.txt", test_data);
+        f1 = $fopen("D:/Programming/Git/cse125/Lab3/Lab3.srcs/sim_1/new/randominput.mem", "w");
+        for(index=0;index<Test_num;index=index+1)begin
+            rand = $random();
+            $fwrite(f1,"%b\n",rand);
+            $display("%b\n", rand);
+        end
+        $fclose(f1);
+         
+        $readmemb("randominput.mem", test_data);
         outfile = $fopen("D:\\Programming\\Git\\cse125\\Lab3\\randomout.txt", "w");
         clk = 0;
         res_n = 0;
         @(posedge clk); @(posedge clk); #1 res_n = 1;
         @(posedge clk);
-        //data_in = test_data[0][63:0];
+//        data_in = test_data[0][WIDTH-1:0];
         shift_out = 1'b0;
         shift_in = 1'b0;
         @(posedge clk);
         shift_out = 1'b0;
         shift_in = 1'b0;
         @(posedge clk);
-        for(i=0;i<1000;i=i+1)begin
-            data_in = test_data[i][63:0];
+        for(i=0;i<Test_num;i=i+1)begin
+            data_in = test_data[i][WIDTH-1:0];
             shift_out = {$random+9} % 2;
             shift_in = {$random} % 2;
             if(full)
@@ -63,7 +72,7 @@ module random_test(
             rmso = shift_out;
             if((shift_in == 1'b1) && (full != 1'b1))
             begin
-                //data_in = test_data[i][63:0];
+                //data_in = test_data[i][WIDTH-1:0];
             end
             else
             begin

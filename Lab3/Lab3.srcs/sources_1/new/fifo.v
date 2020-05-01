@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
+module fifo #(parameter WIDTH =32, parameter DEPTH = 8)(
     input clk,
     input res_n,
     input shift_in,
@@ -73,7 +73,7 @@ module fifo #(parameter WIDTH =64, parameter DEPTH = 8)(
            // data_input[ptr_shift_in]<={WIDTH{1'bx}};
             //ptr_shift_out <= ptr_shift_out+1;
             //ptr_shift_in <= ptr_shift_in -1;
-            if(!shift_in)
+//            if(!shift_in)
                 ptr_diff <= ptr_diff-1;
         end
         
@@ -140,17 +140,16 @@ endmodule
 
 
 
-
-module fifo_stage #(parameter WIDTH = 64)(
+module fifo_stage #(parameter SUBWIDTH = 32)(
 input clk,
-input [WIDTH-1:0]si,
-input [WIDTH-1:0]hold,
-input [WIDTH-1:0]so,
+input [SUBWIDTH-1:0]si,
+input [SUBWIDTH-1:0]hold,
+input [SUBWIDTH-1:0]so,
 input [1:0]select,
-output reg [WIDTH-1:0]out
+output reg [SUBWIDTH-1:0]out
 );
 
-wire [WIDTH-1:0] D_in;
+wire [SUBWIDTH-1:0] D_in;
 reg  [1:0] current_state;
 reg  [1:0] next_state;
 parameter HOLD  = 2'b00;
