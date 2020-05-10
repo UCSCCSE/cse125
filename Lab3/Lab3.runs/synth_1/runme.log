@@ -15,29 +15,25 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Device 21-403] Loading part xc7k70tfbv676-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17908 
-WARNING: [Synth 8-2507] parameter declaration becomes local in fifo_stage with formal parameter declaration list [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:155]
-WARNING: [Synth 8-2507] parameter declaration becomes local in fifo_stage with formal parameter declaration list [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:156]
-WARNING: [Synth 8-2507] parameter declaration becomes local in fifo_stage with formal parameter declaration list [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:157]
-WARNING: [Synth 8-2507] parameter declaration becomes local in fifo_stage with formal parameter declaration list [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:158]
+INFO: Helper process launched with PID 16140 
+WARNING: [Synth 8-2507] parameter declaration becomes local in RegisterFIFO with formal parameter declaration list [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:156]
+WARNING: [Synth 8-2507] parameter declaration becomes local in RegisterFIFO with formal parameter declaration list [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:157]
+WARNING: [Synth 8-2507] parameter declaration becomes local in RegisterFIFO with formal parameter declaration list [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:158]
+WARNING: [Synth 8-2507] parameter declaration becomes local in RegisterFIFO with formal parameter declaration list [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:159]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 839.258 ; gain = 238.348
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 840.637 ; gain = 239.293
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'fifo' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23]
 	Parameter WIDTH bound to: 32 - type: integer 
 	Parameter DEPTH bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'fifo_stage' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:143]
-	Parameter SUBWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RegisterFIFO' [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:144]
+	Parameter WIDTH bound to: 32 - type: integer 
 	Parameter HOLD bound to: 2'b00 
 	Parameter SI bound to: 2'b10 
 	Parameter SO bound to: 2'b01 
 	Parameter SI_SO bound to: 2'b11 
-INFO: [Synth 8-6155] done synthesizing module 'fifo_stage' (1#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:143]
-WARNING: [Synth 8-324] index 8 out of range [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:68]
-WARNING: [Synth 8-324] index 8 out of range [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFIFO' (1#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:144]
 WARNING: [Synth 8-5788] Register select_reg in module fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:64]
-WARNING: [Synth 8-5788] Register data_out_reg in module fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:66]
-WARNING: [Synth 8-5788] Register pre_out_reg[7] in module fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:68]
 WARNING: [Synth 8-5788] Register pre_out_reg[6] in module fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:68]
 WARNING: [Synth 8-5788] Register pre_out_reg[5] in module fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:68]
 WARNING: [Synth 8-5788] Register pre_out_reg[4] in module fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:68]
@@ -63,9 +59,10 @@ WARNING: [Synth 8-5788] Register hold_data_reg[1] in module fifo is has both Set
 WARNING: [Synth 8-5788] Register hold_data_reg[0] in module fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:106]
 WARNING: [Synth 8-5788] Register empty_reg in module fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:48]
 WARNING: [Synth 8-5788] Register full_reg in module fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:80]
+WARNING: [Synth 8-3848] Net pre_out[7] in module/entity fifo does not have driver. [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:33]
 INFO: [Synth 8-6155] done synthesizing module 'fifo' (2#1) [D:/Programming/Git/cse125/Lab3/Lab3.srcs/sources_1/new/fifo.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 889.969 ; gain = 289.059
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 890.055 ; gain = 288.711
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -78,43 +75,45 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 889.969 ; gain = 289.059
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 890.055 ; gain = 288.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 889.969 ; gain = 289.059
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 890.055 ; gain = 288.711
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 889.969 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.036 . Memory (MB): peak = 890.055 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [D:/Programming/Git/cse125/Lab3/Lab3.srcs/constrs_1/new/lab3test.xdc]
 Finished Parsing XDC File [D:/Programming/Git/cse125/Lab3/Lab3.srcs/constrs_1/new/lab3test.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Programming/Git/cse125/Lab3/Lab3.srcs/constrs_1/new/lab3test.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fifo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fifo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1003.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1017.879 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1003.762 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1017.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1003.762 ; gain = 402.852
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1017.879 ; gain = 416.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1003.762 ; gain = 402.852
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1017.879 ; gain = 416.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1003.762 ; gain = 402.852
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1017.879 ; gain = 416.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1003.762 ; gain = 402.852
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1017.879 ; gain = 416.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -129,15 +128,15 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 34    
+	               32 Bit    Registers := 33    
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 8     
-	   2 Input     32 Bit        Muxes := 41    
-	   3 Input     32 Bit        Muxes := 8     
+	   2 Input     32 Bit        Muxes := 38    
+	   3 Input     32 Bit        Muxes := 7     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 47    
+	   2 Input      1 Bit        Muxes := 46    
 	   3 Input      1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -151,16 +150,16 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 26    
+	               32 Bit    Registers := 25    
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 41    
-	   3 Input     32 Bit        Muxes := 8     
+	   2 Input     32 Bit        Muxes := 38    
+	   3 Input     32 Bit        Muxes := 7     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 47    
+	   2 Input      1 Bit        Muxes := 46    
 	   3 Input      1 Bit        Muxes := 9     
-Module fifo_stage 
+Module RegisterFIFO 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
@@ -182,40 +181,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][0]' (FDE) to 'pre_out_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][1]' (FDE) to 'pre_out_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][2]' (FDE) to 'pre_out_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][3]' (FDE) to 'pre_out_reg[7][4]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][4]' (FDE) to 'pre_out_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][5]' (FDE) to 'pre_out_reg[7][6]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][6]' (FDE) to 'pre_out_reg[7][7]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][7]' (FDE) to 'pre_out_reg[7][8]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][8]' (FDE) to 'pre_out_reg[7][9]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][9]' (FDE) to 'pre_out_reg[7][10]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][10]' (FDE) to 'pre_out_reg[7][11]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][11]' (FDE) to 'pre_out_reg[7][12]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][12]' (FDE) to 'pre_out_reg[7][13]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][13]' (FDE) to 'pre_out_reg[7][14]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][14]' (FDE) to 'pre_out_reg[7][15]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][15]' (FDE) to 'pre_out_reg[7][16]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][16]' (FDE) to 'pre_out_reg[7][17]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][17]' (FDE) to 'pre_out_reg[7][18]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][18]' (FDE) to 'pre_out_reg[7][19]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][19]' (FDE) to 'pre_out_reg[7][20]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][20]' (FDE) to 'pre_out_reg[7][21]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][21]' (FDE) to 'pre_out_reg[7][22]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][22]' (FDE) to 'pre_out_reg[7][23]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][23]' (FDE) to 'pre_out_reg[7][24]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][24]' (FDE) to 'pre_out_reg[7][25]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][25]' (FDE) to 'pre_out_reg[7][26]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][26]' (FDE) to 'pre_out_reg[7][27]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][27]' (FDE) to 'pre_out_reg[7][28]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][28]' (FDE) to 'pre_out_reg[7][29]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][29]' (FDE) to 'pre_out_reg[7][30]'
-INFO: [Synth 8-3886] merging instance 'pre_out_reg[7][30]' (FDE) to 'pre_out_reg[7][31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pre_out_reg[7][31] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1003.762 ; gain = 402.852
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1017.879 ; gain = 416.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -227,13 +194,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1003.762 ; gain = 402.852
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1017.879 ; gain = 416.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1038.719 ; gain = 437.809
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1033.211 ; gain = 431.867
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -245,7 +212,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1045.094 ; gain = 444.184
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1042.238 ; gain = 440.895
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,13 +236,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:43 . Memory (MB): peak = 1050.887 ; gain = 449.977
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1042.238 ; gain = 440.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:43 . Memory (MB): peak = 1050.887 ; gain = 449.977
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1042.238 ; gain = 440.895
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -294,25 +261,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1050.887 ; gain = 449.977
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1042.238 ; gain = 440.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1050.887 ; gain = 449.977
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1042.238 ; gain = 440.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1050.887 ; gain = 449.977
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1042.238 ; gain = 440.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1050.887 ; gain = 449.977
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1042.238 ; gain = 440.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -331,54 +298,54 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |    16|
 |3     |LUT1   |    33|
-|4     |LUT2   |     3|
-|5     |LUT3   |    36|
-|6     |LUT4   |   109|
-|7     |LUT5   |   328|
-|8     |LUT6   |    81|
-|9     |FDCE   |    32|
-|10    |FDRE   |  1030|
+|4     |LUT2   |     6|
+|5     |LUT3   |    68|
+|6     |LUT4   |    75|
+|7     |LUT5   |   234|
+|8     |LUT6   |   186|
+|9     |FDCE   |    64|
+|10    |FDRE   |   998|
 |11    |IBUF   |    36|
 |12    |OBUF   |    34|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+----------------+-------------+------+
-|      |Instance        |Module       |Cells |
-+------+----------------+-------------+------+
-|1     |top             |             |  1739|
-|2     |  \FIFO[0].FS0  |fifo_stage   |    64|
-|3     |  \FIFO[1].FS0  |fifo_stage_0 |    64|
-|4     |  \FIFO[2].FS0  |fifo_stage_1 |    64|
-|5     |  \FIFO[3].FS0  |fifo_stage_2 |    64|
-|6     |  \FIFO[4].FS0  |fifo_stage_3 |    64|
-|7     |  \FIFO[5].FS0  |fifo_stage_4 |    64|
-|8     |  \FIFO[6].FS0  |fifo_stage_5 |    64|
-|9     |  \FIFO[7].FS0  |fifo_stage_6 |    64|
-+------+----------------+-------------+------+
++------+-----------------+---------------+------+
+|      |Instance         |Module         |Cells |
++------+-----------------+---------------+------+
+|1     |top              |               |  1751|
+|2     |  \FIFO[0].RFS0  |RegisterFIFO   |    64|
+|3     |  \FIFO[1].RFS0  |RegisterFIFO_0 |    64|
+|4     |  \FIFO[2].RFS0  |RegisterFIFO_1 |    64|
+|5     |  \FIFO[3].RFS0  |RegisterFIFO_2 |    64|
+|6     |  \FIFO[4].RFS0  |RegisterFIFO_3 |    64|
+|7     |  \FIFO[5].RFS0  |RegisterFIFO_4 |    64|
+|8     |  \FIFO[6].RFS0  |RegisterFIFO_5 |    64|
+|9     |  \FIFO[7].RFS0  |RegisterFIFO_6 |    64|
++------+-----------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1050.887 ; gain = 449.977
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1042.238 ; gain = 440.895
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1050.887 ; gain = 336.184
-Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1050.887 ; gain = 449.977
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1042.238 ; gain = 313.070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1042.238 ; gain = 440.895
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1062.941 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1042.238 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1062.941 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1042.238 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+16 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1062.941 ; gain = 757.320
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1062.941 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1042.238 ; gain = 735.418
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1042.238 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Programming/Git/cse125/Lab3/Lab3.runs/synth_1/fifo.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file fifo_utilization_synth.rpt -pb fifo_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 16:00:56 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri May  1 19:18:43 2020...

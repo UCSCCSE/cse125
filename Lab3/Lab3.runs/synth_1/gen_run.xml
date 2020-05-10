@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1588287597">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1588385869">
   <File Type="PA-TCL" Name="fifo.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="fifo_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="fifo_reports.tcl"/>
@@ -32,6 +32,13 @@
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/constrs_1/new/lab3test1.xdc">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/lab3test.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
@@ -39,6 +46,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PPRDIR/lab3.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;WRITE_BITSTREAM;TCL.PRE"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

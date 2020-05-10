@@ -41,7 +41,7 @@ module fifo #(parameter WIDTH =32, parameter DEPTH = 8)(
     integer j; 
     integer k;
     integer temp_full;
-    reg [WIDTH-1:0] ptr_diff;
+    reg [WIDTH-1:0] ptr_diff = 0;
     reg [1:0]select;
     reg choose;
     reg can_hold, can_shift_in,can_shift_out,invalid;
@@ -50,7 +50,7 @@ module fifo #(parameter WIDTH =32, parameter DEPTH = 8)(
     
     always @(posedge clk or negedge res_n )begin
         if(!res_n)begin
-            //data_out <=0;
+            data_out <=0;
             //ptr_shift_in <=0;
             //ptr_shift_out<=0;
             //k=0;
@@ -64,16 +64,16 @@ module fifo #(parameter WIDTH =32, parameter DEPTH = 8)(
             select   <= 2'b01;
             //ptr_shift_out = ptr_shift_out % DEPTH;
             data_out <= data_output[0];
-            for(j=0;j<DEPTH;j=j+1)begin: DATA_OUT_CONNECT       
+            for(j=0;j<DEPTH-1;j=j+1)begin: DATA_OUT_CONNECT       
                 pre_out[j]<=data_output[j+1];
             end
-            for(j=0;j<DEPTH;j=j+1)begin: DATA_IN       
+            for(j=0;j<DEPTH-1;j=j+1)begin: DATA_IN       
                 data_input[j]<=data_input[j+1];
             end
            // data_input[ptr_shift_in]<={WIDTH{1'bx}};
             //ptr_shift_out <= ptr_shift_out+1;
             //ptr_shift_in <= ptr_shift_in -1;
-//            if(!shift_in)
+            if(!shift_in)
                 ptr_diff <= ptr_diff-1;
         end
         
@@ -127,7 +127,7 @@ module fifo #(parameter WIDTH =32, parameter DEPTH = 8)(
     generate
         for(i =0; i<DEPTH;i=i+1)begin: FIFO
               
-            fifo_stage FS0(.clk(clk), .si(data_input[i]),.hold(hold_data[i]), .so(pre_out[i]), .select(select), .out(data_output[i]));
+            RegisterFIFO RFS0(.clk(clk), .si(data_input[i]),.hold(hold_data[i]), .so(pre_out[i]), .select(select), .out(data_output[i]));
         
         end
     endgenerate
@@ -140,22 +140,23 @@ endmodule
 
 
 
-module fifo_stage #(parameter SUBWIDTH = 32)(
+
+module RegisterFIFO #(parameter WIDTH = 32)(
 input clk,
-input [SUBWIDTH-1:0]si,
-input [SUBWIDTH-1:0]hold,
-input [SUBWIDTH-1:0]so,
+input [WIDTH-1:0]si,
+input [WIDTH-1:0]hold,
+input [WIDTH-1:0]so,
 input [1:0]select,
-output reg [SUBWIDTH-1:0]out
+output reg [WIDTH-1:0]out
 );
 
-wire [SUBWIDTH-1:0] D_in;
+wire [WIDTH-1:0] D_in;
 reg  [1:0] current_state;
 reg  [1:0] next_state;
-parameter HOLD  = 2'b00;
-parameter SI    = 2'b10;
-parameter SO    = 2'b01;
-parameter SI_SO = 2'b11;
+parameter [1:0] HOLD  = 2'b00;
+parameter [1:0]  SI    = 2'b10;
+parameter [1:0]  SO    = 2'b01;
+parameter [1:0]  SI_SO = 2'b11;
 
 
 always @(posedge clk)begin
